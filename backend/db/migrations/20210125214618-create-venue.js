@@ -17,7 +17,7 @@ module.exports = {
       },
       gpsLocation: {
         allowNull: false,
-        type: Sequelize.NUMERIC
+        type: Sequelize.STRING
       },
       city: {
         allowNull: false,

@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Venue = sequelize.define('Venue', {
     name: DataTypes.STRING(100),
     description: DataTypes.TEXT,
-    gpsLocation: DataTypes.NUMERIC,
+    gpsLocation: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipCode: DataTypes.INTEGER,
