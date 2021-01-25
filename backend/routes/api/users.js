@@ -16,8 +16,8 @@ const validateSignup = [
       .withMessage('Please provide a valid email.'),
     check('username')
       .exists({ checkFalsy: true })
-      .isLength({ min: 4 })
-      .withMessage('Please provide a username with at least 4 characters.'),
+      .isLength({ min: 6 })
+      .withMessage('Please provide a username with at least 6 characters.'),
     check('username')
       .not()
       .isEmail()
@@ -29,9 +29,21 @@ const validateSignup = [
     handleValidationErrors,
   ];
 
+  const validateLogin = [
+    check('email')
+      .exists({ checkFalsy: true })
+      .withMessage('Please provide an email address.')
+      .isEmail()
+      .withMessage('The email address entered is not valid.'),
+    check('password')
+      .exists({ checkFalsy: true })
+      .withMessage('Please provide a password.'),
+    handleValidationErrors,
+];
+
   // Sign up
 router.post(
-    '',
+    '/sign-up',
     validateSignup,
     asyncHandler(async (req, res) => {
       const { email, password, username } = req.body;
@@ -45,19 +57,13 @@ router.post(
     }),
   );
 
-
-router.post(
-    '',
+  router.post(
+    '/login',
+    validateLogin,
     asyncHandler(async (req, res) => {
-      const { email, password, username } = req.body;
-      const user = await User.signup({ email, username, password });
-
-      await setTokenCookie(res, user);
-
-      return res.json({
-        user,
-      });
-    }),
-  );
+      const {} = req.body;
+      const 
+    })
+  )
 
 module.exports = router;
