@@ -1,51 +1,38 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Venues', {
+    return queryInterface.createTable('Reviews', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING(100)
+      userId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {model: 'Users'}
       },
-      description: {
+      venueId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {model: 'Venues'}
+      },
+      title: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      body: {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      gpsLocation: {
-        allowNull: false,
-        type: Sequelize.NUMERIC
-      },
-      city: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      state: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      zipCode: {
+      rating: {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      maxNumberGuests: {
+      verifiedBooking: {
         allowNull: false,
-        type: Sequelize.INTEGER
-      },
-      averagePrice: {
-        allowNull: false,
-        type: Sequelize.NUMERIC(10, 2)
-      },
-      imgUrl: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      host: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -58,6 +45,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Venues');
+    return queryInterface.dropTable('Reviews');
   }
 };

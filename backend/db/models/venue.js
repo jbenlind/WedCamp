@@ -8,12 +8,20 @@ module.exports = (sequelize, DataTypes) => {
     state: DataTypes.STRING,
     zipCode: DataTypes.INTEGER,
     maxNumberGuests: DataTypes.INTEGER,
-    averagePrice: DataTypes.NUMERIC,
+    averagePrice: DataTypes.NUMERIC(10, 2),
     imgUrl: DataTypes.STRING,
     host: DataTypes.STRING
   }, {});
   Venue.associate = function(models) {
-    // associations can be defined here
+    Venue.hasMany(models.Booking, { foreignKey: 'venueId'});
+    Venue.hasMany(models.Review, { foreignKey: 'venueId'});
+    const columnMapping = {
+      through: 'VenueAmenity',
+      otherKey: 'amenitiesId',
+      foreignkey: 'venueId'
+    }
+    Venue.belongsToMany(models.Amenities, columnMapping)
   };
+
   return Venue;
 };
