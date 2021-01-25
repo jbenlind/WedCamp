@@ -1,0 +1,63 @@
+'use strict';
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('Venues', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      name: {
+        type: Sequelize.STRING(100)
+      },
+      description: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
+      gpsLocation: {
+        allowNull: false,
+        type: Sequelize.NUMERIC
+      },
+      city: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      state: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      zipCode: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      maxNumberGuests: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
+      averagePrice: {
+        allowNull: false,
+        type: Sequelize.NUMERIC
+      },
+      imgUrl: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      host: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
+    });
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('Venues');
+  }
+};

@@ -1,9 +1,7 @@
 const express = require('express')
 const asyncHandler = require('express-async-handler');
-
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User } = require('../../db/models');
-
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
@@ -29,18 +27,6 @@ const validateSignup = [
     handleValidationErrors,
   ];
 
-  const validateLogin = [
-    check('email')
-      .exists({ checkFalsy: true })
-      .withMessage('Please provide an email address.')
-      .isEmail()
-      .withMessage('The email address entered is not valid.'),
-    check('password')
-      .exists({ checkFalsy: true })
-      .withMessage('Please provide a password.'),
-    handleValidationErrors,
-];
-
   // Sign up
 router.post(
     '/sign-up',
@@ -56,14 +42,5 @@ router.post(
       });
     }),
   );
-
-  router.post(
-    '/login',
-    validateLogin,
-    asyncHandler(async (req, res) => {
-      const {} = req.body;
-      const 
-    })
-  )
 
 module.exports = router;
