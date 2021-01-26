@@ -1,9 +1,8 @@
 .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
     align-items: center;
-    height: 45px;
+    height: 5vh;
     margin-top: 0%;
     background-color: white;
 }
@@ -14,22 +13,28 @@
     color: rgba(30, 130, 76, 1);
     text-decoration: none;
     font-weight: 550;
-}
-
-.fad {
-    padding-right:55%;
+    white-space: nowrap;
 }
 
 .home,
 .login,
 .signup,
 .explore {
+    height: 80%;
     font-size: 30px;
     color: black;
-    margin-left: 2%;
-    margin-right: 2%;
     text-decoration: none;
+    white-space: nowrap;
+    padding-left: 2%;
+    padding-right: 2%;
     /* font-family: Calibre, Helvetica, Arial, sans-serif; */
+}
+
+.link-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 3%;
 }
 
 

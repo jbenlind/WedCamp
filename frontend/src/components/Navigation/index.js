@@ -23,12 +23,16 @@ function Navigation({ isLoaded }){
 
   return (
     <ul className='nav-bar'>
-        <label className='appName'>WedCamp</label>
-        <i className="fad fa-campground"></i>
-        <NavLink className='explore' to='/explore'>Explore</NavLink>
-        <NavLink className ='login'to="/login">Log In</NavLink>
-        <NavLink className='signup' to="/signup">Sign Up</NavLink>
-        <NavLink className='home' exact to="/">Home</NavLink>
+        <div>
+          <label className='appName'>WedCamp</label>
+          <i className="fad fa-campground"></i>
+        </div>
+        <div className='link-parent'>
+          <NavLink className='explore' to='/explore'>Explore</NavLink>
+          <NavLink className ='login'to="/login">Log In</NavLink>
+          <NavLink className='signup' to="/signup">Sign Up</NavLink>
+          <NavLink className='home' exact to="/">Home</NavLink>
+        </div>
         {isLoaded && sessionLinks}
     </ul>
   );

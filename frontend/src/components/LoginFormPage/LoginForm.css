@@ -1,3 +1,4 @@
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -8,12 +9,46 @@
     margin-right: auto;
     height: 600px;
     width: 500px;
-    font-size: 20px;
     color: black;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 
-.login-form > h3 {
+.form-header {
     color: black;
+}
+
+.form-text {
+    font-size: 25px;
+    margin-top: 0%;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 50px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.email-input,
+.password-input {
+    margin-top: 0%;
+    border-radius: 5px;
+    border-color: white;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.login-button {
+    margin: 6%;
+    height: 55px;
+    width: 210px;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 25px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
 }
