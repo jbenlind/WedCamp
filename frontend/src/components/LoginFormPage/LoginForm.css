@@ -1,15 +1,19 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, .7);
+    align-items: center;
+    background-color: rgba(255, 255, 255, .8);
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    padding: auto;
     height: 600px;
     width: 500px;
     font-size: 20px;
-    color: white;
+    color: black;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.login-form > h3 {
+    color: black;
 }
