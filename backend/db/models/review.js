@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     verifiedBooking: DataTypes.BOOLEAN
   }, {});
   Review.associate = function(models) {
-    Review.belongsTo(models.Users, { foreignKey: 'userId'});
+    Review.belongsTo(models.User, { foreignKey: 'userId'});
     Review.belongsTo(models.Venue, { foreignKey: 'venueId'});
   };
   return Review;

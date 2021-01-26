@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       otherKey: 'amenitiesId',
       foreignkey: 'venueId'
     }
-    Venue.belongsToMany(models.Amenities, columnMapping)
+    Venue.belongsToMany(models.Amenity, columnMapping)
   };
 
   return Venue;
