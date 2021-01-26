@@ -25,7 +25,9 @@ function LoginFormPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='login-form' onSubmit={handleSubmit}>
+      <h3>Welcome back!</h3>
+      <h4>Lets get you outside</h4>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>

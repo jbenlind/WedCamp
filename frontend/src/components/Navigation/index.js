@@ -22,11 +22,14 @@ function Navigation({ isLoaded }){
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
+    <ul className='nav-bar'>
+        <label className='appName'>WedCamp</label>
+        <i className="fad fa-campground"></i>
+        <NavLink className='explore' to='/explore'>Explore</NavLink>
+        <NavLink className ='login'to="/login">Log In</NavLink>
+        <NavLink className='signup' to="/signup">Sign Up</NavLink>
+        <NavLink className='home' exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
-      </li>
     </ul>
   );
 }

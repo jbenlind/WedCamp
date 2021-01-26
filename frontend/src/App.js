@@ -9,6 +9,10 @@ function App() {
     <Navigation />
       <Switch>
 
+        <Route path='/' exact>
+          <SplashPage />
+        </Route>
+
         <Route path='/login'>
           <LoginFormPage />
         </Route>
