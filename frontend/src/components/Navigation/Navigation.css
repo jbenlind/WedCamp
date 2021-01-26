@@ -1,0 +1,43 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 45px;
+    margin-top: 0%;
+    background-color: white;
+}
+
+.appName,
+.fad {
+    font-size: 30px;
+    color: rgba(30, 130, 76, 1);
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.fad {
+    padding-right:55%;
+}
+
+.home,
+.login,
+.signup,
+.explore {
+    font-size: 30px;
+    color: black;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-decoration: none;
+    /* font-family: Calibre, Helvetica, Arial, sans-serif; */
+}
+
+
+.home:hover,
+.login:hover,
+.signup:hover,
+.explore:hover {
+    text-decoration: underline;
+    text-decoration-color:rgba(30, 130, 76, 1);
+    cursor: pointer;
+}

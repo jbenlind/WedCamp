@@ -28,7 +28,9 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='signup-form' onSubmit={handleSubmit}>
+      <h3>Join WedCamp</h3>
+      <h4>Start discovering venues</h4>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
