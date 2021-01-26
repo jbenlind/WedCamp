@@ -19,7 +19,8 @@
 .home,
 .login,
 .signup,
-.explore {
+.explore,
+.logout {
     height: 80%;
     font-size: 30px;
     color: black;
@@ -41,7 +42,8 @@
 .home:hover,
 .login:hover,
 .signup:hover,
-.explore:hover {
+.explore:hover,
+.logout:hover {
     text-decoration: underline;
     text-decoration-color:rgba(30, 130, 76, 1);
     cursor: pointer;

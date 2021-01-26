@@ -1,24 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
+  const history = useHistory();
 
-  let sessionLinks;
-  if (sessionUser) {
-    sessionLinks = (
-      <ProfileButton user={sessionUser} />
-    );
-  } else {
-    sessionLinks = (
-      <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-      </>
-    );
+  //dispatch logout thunk
+  const userLogout = () => {
+
+    history.push('/');
   }
 
   return (
@@ -29,11 +22,14 @@ function Navigation({ isLoaded }){
         </div>
         <div className='link-parent'>
           <NavLink className='explore' to='/explore'>Explore</NavLink>
-          <NavLink className ='login'to="/login">Log In</NavLink>
-          <NavLink className='signup' to="/signup">Sign Up</NavLink>
+          {!sessionUser &&
+          <NavLink className ='login'to="/login">Log In</NavLink>}
+          {!sessionUser &&
+          <NavLink className='signup' to="/signup">Sign Up</NavLink>}
           <NavLink className='home' exact to="/">Home</NavLink>
+          {sessionUser &&
+          <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
         </div>
-        {isLoaded && sessionLinks}
     </ul>
   );
 }
