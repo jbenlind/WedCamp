@@ -34,33 +34,28 @@ function SignupFormPage() {
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
-      <label>
-        Email
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          placeholder='Email'
         />
-      </label>
-      <label>
-        Username
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          placeholder='Username'
         />
-      </label>
-      <label>
-        Password
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          placeholder='Password'
         />
-      </label>
+
       <label>
         Confirm Password
         <input

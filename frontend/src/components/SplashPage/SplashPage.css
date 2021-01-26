@@ -10,18 +10,18 @@ body {
     width: 100vw;
 }
 
-h1 {
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: auto;
+    padding-top: 3%;
     font-size: 68px;
     font-weight: 700;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     color: white;
 }
 
-h3 {
+.header-2 {
     display: flex;
     justify-content: center;
     align-items: center;
