@@ -1,11 +1,24 @@
+.login-page {
+    background-image: url('../images/ben-rosett-xI_-wFJhCiM-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+}
+
+
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, .8);
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
     height: 500px;
     width: 500px;
     color: black;
@@ -47,6 +60,7 @@
 .password-input {
     margin-top: 3%;
     margin-bottom: 2%;
+    padding-left: 15px;
     border-radius: 15px;
     border-color: white;
     height: 60px;
@@ -73,7 +87,7 @@
 
 .redirect-signup {
     margin-top: 7%;
-    font-size: 15px;
+    font-size: 18px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     color: black;
 }

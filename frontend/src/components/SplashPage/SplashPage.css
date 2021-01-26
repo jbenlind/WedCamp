@@ -1,4 +1,4 @@
-body {
+.splash {
     background-image: url('../images/ben-rosett-xI_-wFJhCiM-unsplash.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, .6);
-    height: 20%;
+    height: 12%;
     margin-top: 2%;
     margin-left: 28%;
     margin-right: 28%;
