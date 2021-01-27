@@ -1,5 +1,6 @@
 .explorer-body {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -15,10 +16,13 @@
     justify-content: flex-end;
     height: 350px;
     width: 500px;
+    margin: 2%;
     color: white;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .venue-card:hover {
