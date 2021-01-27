@@ -14,6 +14,7 @@ module.exports = {
         averagePrice: 20000,
         imgUrl:`https://cdn.wedding-spot.com/__sized__/images/venues/16725/Chapters-on-the-Horizon-Viola-WI-656b3321-c425-4fda-8b25-703a4d817069.1608224091-97450e389c42885476f1fbe9bc5bca5a.jpeg`,
         host:"Chapters on the Horizon",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },

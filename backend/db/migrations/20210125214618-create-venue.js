@@ -47,6 +47,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      reservedDates: {
+        type:Sequelize.DATE
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
