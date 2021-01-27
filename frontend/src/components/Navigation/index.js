@@ -1,35 +1,38 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
+import { NavLink, useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+// import ProfileButton from './ProfileButton';
+import { logout } from '../../store/session';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
+  const history = useHistory();
+  const dispatch = useDispatch();
 
-  let sessionLinks;
-  if (sessionUser) {
-    sessionLinks = (
-      <ProfileButton user={sessionUser} />
-    );
-  } else {
-    sessionLinks = (
-      <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-      </>
-    );
+  const userLogout = (event) => {
+    event.preventDefault()
+
+    dispatch(logout());
+    history.push('/');
   }
 
   return (
     <ul className='nav-bar'>
-        <label className='appName'>WedCamp</label>
-        <i className="fad fa-campground"></i>
-        <NavLink className='explore' to='/explore'>Explore</NavLink>
-        <NavLink className ='login'to="/login">Log In</NavLink>
-        <NavLink className='signup' to="/signup">Sign Up</NavLink>
-        <NavLink className='home' exact to="/">Home</NavLink>
-        {isLoaded && sessionLinks}
+        <div>
+          <label className='appName'>WedCamp</label>
+          <i className="fad fa-campground"></i>
+        </div>
+        <div className='link-parent'>
+          <NavLink className='explore' to='/explore'>Explore</NavLink>
+          {!sessionUser &&
+          <NavLink className ='login'to="/login">Log In</NavLink>}
+          {!sessionUser &&
+          <NavLink className='signup' to="/signup">Sign Up</NavLink>}
+          <NavLink className='home' exact to="/">Home</NavLink>
+          {sessionUser &&
+          <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
+        </div>
     </ul>
   );
 }

@@ -1,12 +1,17 @@
 import { Switch, Route } from "react-router-dom";
-import SignupFormPage from './components/SignupFormPage';
-import LoginFormPage from './components/LoginFormPage';
-import Navigation from './components/Navigation';
 import SplashPage from './components/SplashPage';
+import LoginFormPage from './components/LoginFormPage';
+import SignupFormPage from './components/SignupFormPage';
+import Navigation from './components/Navigation';
+import Explorer from './components/Explore';
+// import upComingBookings from './components/Bookings';
+
+
 function App() {
   return (
     <>
     <Navigation />
+    {/* <upComingBookings /> */}
       <Switch>
 
         <Route path='/' exact>
@@ -21,6 +26,10 @@ function App() {
           <SignupFormPage />
         </Route>
 
+        <Route path='/explore'>
+          <Explorer />
+        </Route>
+        
       </Switch>
     </>
 

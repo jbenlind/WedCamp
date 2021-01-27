@@ -1,0 +1,53 @@
+.explorer-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+}
+
+.venue-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 350px;
+    width: 500px;
+    margin: 2%;
+    color: white;
+    border-radius: 25px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.venue-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 3px 3px 3px rgb(97, 96, 96);
+    transition: all 0.25s ease 0s;
+}
+
+.card-title {
+    padding-top: 1%;
+    margin: 0;
+    text-align: center;
+    font-size: 27px;
+    width: 100%;
+    background-color: rgb(93, 92, 72);
+    overflow: hidden;
+}
+
+.card-location {
+    text-align: center;
+    font-size: 22px;
+    padding-top: 0;
+    padding-bottom: 1%;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(93, 92, 72);
+    overflow: hidden;
+}

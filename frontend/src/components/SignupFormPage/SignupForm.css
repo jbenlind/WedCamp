@@ -1,19 +1,98 @@
+.signup-page {
+    background-image: url('../images/ben-rosett-xI_-wFJhCiM-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+    width: 100vw;
+}
+
 .signup-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, .8);
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
     height: 600px;
     width: 500px;
-    font-size: 20px;
     color: black;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 
-.signup-form > h3 {
+.signup-form ::placeholder {
+    color: rgba(0, 0, 0, .8)
+}
+
+.form-header {
+    padding-top: 8%;
+    padding-bottom: 2%;
     color: black;
+    font-size: 38px;
+    font-weight: 700;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.form-text {
+    font-size: 25px;
+}
+
+.signup-form-body {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.signup-email-input,
+.signup-username-input,
+.signup-password-input,
+.confirm-password-input {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 15px;
+    border-radius: 15px;
+    border-color: white;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.signup-button {
+    margin-top: 5%;
+    height: 58px;
+    width: 210px;
+    font-size: 28px;
+    border-radius: 15px;
+    border-color: black;
+    background-color: rgba(0,0,0,0);
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.signup-button:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(30, 130, 76, 1);
+    cursor: pointer;
+}
+
+.redirect-login {
+    margin-top: 7%;
+    font-size: 18px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+.redirect-login:hover {
+    color: rgba(30, 130, 76, 1);
+    cursor: pointer;
 }

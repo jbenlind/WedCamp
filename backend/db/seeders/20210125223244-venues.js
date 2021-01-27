@@ -17,6 +17,20 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
+      {
+        name: "The Loft and Chapel at Cedar Ridge",
+        description: "Choose The Loft and Chapel at Cedar Ridge for your beautiful wedding celebration. The Loft and Chapel provide beautifully landscaped outdoor grounds for your ceremony. The breathtaking outdoor gazebo, a mid acres of perfectly manicured grounds, is the perfect location to tie the knot. The structure is simple, white and surrounded by greenery. It also creates the perfect backdrop for capturing once-in-a-lifetime photos. But don't worry if you decide to get married in the winter. The Loft and Chapel offers a wonderful hall for all of your guest to enjoy your ceremony and reception on your special day, while staying warm and toasty indoors. The Loft features exposed brick walls, neutral tones and wood trim accents. The open layout allows you to configure the exact layout you need to accommodate your guests for a flawless gathering. Celebrate the most romantic day of your life at The Loft and Chapel at Cedar Ridge.",
+        gpsLocation: "43.04052, -88.22286",
+        city: "Waukesha",
+        state: "Wisconsin",
+        zipCode: 53188,
+        maxNumberGuests: 300,
+        averagePrice: 9000,
+        imgUrl: "https://images.cvent.com/ws/images/venues/7687/The-Loft-and-Chapel-at-Cedar-Ridge-Wedding-Waukesha-WI-1.1454666032.jpg?f=webp&unique=true&d=490",
+        host: "Cedar Ridge",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ], {});
 
   },
