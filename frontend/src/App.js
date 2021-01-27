@@ -4,6 +4,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import Explorer from './components/Explore';
+import DemoUser from './components/DemoUser';
 // import upComingBookings from './components/Bookings';
 
 
@@ -29,7 +30,11 @@ function App() {
         <Route path='/explore'>
           <Explorer />
         </Route>
-        
+
+        <Route path='/demo'>
+          <DemoUser />
+        </Route>
+
       </Switch>
     </>
 
