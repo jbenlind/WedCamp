@@ -90,3 +90,7 @@
 .splash ::placeholder {
     color:rgba(30, 130, 76, 1);
 }
+
+input, button {
+    outline: none;
+  }

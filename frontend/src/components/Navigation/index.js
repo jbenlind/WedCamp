@@ -1,16 +1,19 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
+import { useDispatch, useSelector } from 'react-redux';
+// import ProfileButton from './ProfileButton';
+import { logout } from '../../store/session';
 import './Navigation.css';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
   const history = useHistory();
+  const dispatch = useDispatch();
 
-  //dispatch logout thunk
-  const userLogout = () => {
+  const userLogout = (event) => {
+    event.preventDefault()
 
+    dispatch(logout());
     history.push('/');
   }
 
