@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as venueActions from '../../store/venues';
+import './explore.css'
 
 const Explorer = () => {
     const dispatch = useDispatch();
@@ -12,13 +13,15 @@ const Explorer = () => {
     const venues = useSelector((state) => state.venueInfo.venues);
 
     return(
-        <div>
-            <ul>
-                {venues &&
-                venues.map((venue) => (
-                    <li key={venue.id}>{venue.name}</li>
-                ))}
-            </ul>
+        <div className='explorer-body'>
+            {venues &&
+            venues.map((venue) => (
+                <div className="venue-card" key={venue.id}
+                style={ {backgroundImage: `url(${venue.imgUrl})`}}>
+                    <div className='card-title'>{venue.name}</div>
+                    <div className='card-location'>{`${venue.city}, ${venue.state}`}</div>
+                </div>
+            ))}
         </div>
     )
 }
