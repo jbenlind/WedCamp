@@ -14,23 +14,36 @@ const FullDetails = () => {
 
   const venues = useSelector((state) => state.venueInfo.venues);
 
-  const venue = venues.find((venue) => venue.id === Number(venueId));
+  let venue;
+  if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
+  if (!venue) return null;
 
   return (
-    <div className="venue-detail-card">
-      <img src={venue.imgUrl} alt="hidden"></img>
-      <div class>
-        <h1 className="name">{venue.name}</h1>
-        <div className="city-state">{`${venue.city}, ${venue.state}`}</div>
-        <div className="venue-description">{venue.description}</div>
-      </div>
-      <div className="details">
-        <div className="zipcode">{`Zipcode: ${venue.zipCode}`}</div>
-        <div className="gpsLocation">{`GPS Locations: ${venue.gpsLocation}`}</div>
-        <div className="guests">{`Max number of guests: ${venue.maxNumberGuests}`}</div>
-        <div className="price">{`Average cost: $${venue.averagePrice}`}</div>
-        <div className="host">{`Venue Host: ${venue.host}`}</div>
-        <div className="reservedDates">{venue.reservedDates}</div>
+    <div className="venue-detail-page">
+      <div className='details-card'>
+        <div className="image-form">
+          <div className="image-form-details">
+            <h1 className="venue-name">{venue.name}</h1>
+            <div className="venue-items">
+              <li className="city-state">{`${venue.city}, ${venue.state}`}</li>
+              <li className="price">{`Average cost: $${venue.averagePrice}`}</li>
+              <li className="guests">{`Max number of guests: ${venue.maxNumberGuests}`}</li>
+              <li className="host">{`Owner: ${venue.host}`}</li>
+              <li className="zipcode">{`Zipcode: ${venue.zipCode}`}</li>
+              <li className="gpsLocation">{`Cooridinates: ${venue.gpsLocation}`}</li>
+              {/* <li className="reservedDates">{venue.reservedDates}</li> */}
+            </div>
+          </div>
+          <img src={venue.imgUrl} alt="hidden"></img>
+        </div>
+        <div className='description-booking'>
+          <div className="description">
+            <div className="venue-description">{venue.description}</div>
+          </div>
+          <form className='booking-form'>
+            <h3 className='booking-form-title'>Book</h3>
+          </form>
+        </div>
       </div>
     </div>
   );

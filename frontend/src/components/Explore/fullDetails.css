@@ -1,18 +1,63 @@
-.venue-detail-card {
+.venue-detail-page {
   height: 95vh;
   width: 100vw;
-}
-
-.image {
+  padding-top: 2%;
   display: flex;
-}
-.name {
-  font-size: 35px;
+  flex-direction: column;
+  align-items: center;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 
-.venue-description {
+.details-card {
+  padding: 2%;
+  margin: 0;
+  width: 60vw;
+  background-color: rgb(121, 120, 108);
+  border-radius: 25px;
+}
+
+.image-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  color: white;
+}
+
+.venue-name {
+  font-size: 40px;
+}
+
+.venue-items {
+  padding-top: 4%;
+  padding-left: 10%;
+  font-size: 20px;
+}
+
+.description-booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  color: white;
+}
+
+.description {
   justify-content: flex-start;
-  font-size: 25px;
+  font-size: 20px;
   width: 700px;
   padding: 2%;
+  color: white;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 250px;
+  width: 400px;
+  margin-top: 4%;
+  margin-left: 6%;
+  color: black;
+  border-radius: 25px;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
 }

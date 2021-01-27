@@ -3,8 +3,15 @@
     grid-template-columns: 1fr .8fr;
     align-items: center;
     height: 5vh;
-    margin-top: 0%;
+    width: 80%;
+    margin-top: 0;
     background-color: white;
+    /* width: 100%; */
+    /* position: absolute; */
+    /* all other elements top margin 5vh */
+    border-bottom: 1px solid lightgrey;
+    overflow: auto;
+
 }
 
 .appName,

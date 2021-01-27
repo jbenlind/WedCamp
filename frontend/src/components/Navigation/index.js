@@ -18,24 +18,26 @@ function Navigation({ isLoaded }){
   }
 
   return (
-    <ul className='nav-bar'>
-        <div>
-          <label className='appName'>WedCamp</label>
-          <i className="fad fa-campground"></i>
-        </div>
-        <div className='link-parent'>
-          <NavLink className='explore' to='/explore'>Explore</NavLink>
-          {!sessionUser &&
-            <NavLink className='demo' to='/demo'>Demo</NavLink>}
-          {!sessionUser &&
-          <NavLink className ='login'to="/login">Log In</NavLink>}
-          {!sessionUser &&
-          <NavLink className='signup' to="/signup">Sign Up</NavLink>}
-          <NavLink className='home' exact to="/">Home</NavLink>
-          {sessionUser &&
-          <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
-        </div>
-    </ul>
+    <div>
+      <ul className='nav-bar'>
+          <div>
+            <label className='appName'>WedCamp</label>
+            <i className="fad fa-campground"></i>
+          </div>
+          <div className='link-parent'>
+            <NavLink className='explore' to='/explore'>Explore</NavLink>
+            {!sessionUser &&
+              <NavLink className='demo' to='/demo'>Demo</NavLink>}
+            {!sessionUser &&
+            <NavLink className ='login'to="/login">Log In</NavLink>}
+            {!sessionUser &&
+            <NavLink className='signup' to="/signup">Sign Up</NavLink>}
+            <NavLink className='home' exact to="/">Home</NavLink>
+            {sessionUser &&
+            <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
+          </div>
+      </ul>
+    </div>
   );
 }
 

@@ -9,7 +9,7 @@
     width: 100vw;
     /* google flex diplays for columns and rows */
 }
-
+/* make a grid */
 .venue-card {
     display: flex;
     flex-direction: column;
