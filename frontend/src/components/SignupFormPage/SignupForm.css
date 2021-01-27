@@ -82,6 +82,7 @@
 .signup-button:hover {
     text-decoration: underline;
     text-decoration-color: rgba(30, 130, 76, 1);
+    cursor: pointer;
 }
 
 .redirect-login {
@@ -93,4 +94,5 @@
 
 .redirect-login:hover {
     color: rgba(30, 130, 76, 1);
+    cursor: pointer;
 }

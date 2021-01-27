@@ -1,5 +1,5 @@
 // import { useState, useEffect } from 'react';
-// import { useDispatch } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 
 // // use selector
 
@@ -7,7 +7,9 @@
 
 //     const [showBookings, setShowBookings] = useState(false);
 
-//     const dispatch = useDispatch();
+
+//     // needs setup
+//     const bookings = useSelector((state) => state.bookings)
 
 //     useEffect(() => {
 //         dispatch()

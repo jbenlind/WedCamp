@@ -3,7 +3,8 @@ import SplashPage from './components/SplashPage';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
-import upComingBookings from './components/Bookings';
+import Explorer from './components/Explore';
+// import upComingBookings from './components/Bookings';
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
           <SignupFormPage />
         </Route>
 
+        <Route path='/explore'>
+          <Explorer />
+        </Route>
+        
       </Switch>
     </>
 
