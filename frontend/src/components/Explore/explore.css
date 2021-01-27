@@ -7,6 +7,7 @@
     padding: 0;
     height: 95vh;
     width: 100vw;
+    /* google flex diplays for columns and rows */
 }
 
 .venue-card {
@@ -23,12 +24,14 @@
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .venue-card:hover {
     transform: translateY(-8px);
     box-shadow: 3px 3px 3px rgb(97, 96, 96);
     transition: all 0.25s ease 0s;
+    cursor: pointer;
 }
 
 .card-title {
@@ -39,6 +42,7 @@
     width: 100%;
     background-color: rgb(93, 92, 72);
     overflow: hidden;
+
 }
 
 .card-location {
@@ -50,4 +54,25 @@
     width: 100%;
     background-color: rgb(93, 92, 72);
     overflow: hidden;
+
+}
+
+.card-link {
+    text-decoration: none;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 350px;
+    width: 500px;
+    margin: 1%;
+    border-radius: 25px;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }

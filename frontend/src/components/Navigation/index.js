@@ -22,11 +22,11 @@ function Navigation({ isLoaded }){
         <div>
           <label className='appName'>WedCamp</label>
           <i className="fad fa-campground"></i>
-          {!sessionUser &&
-            <NavLink className='demo' to='/demo'>Demo WedCamp</NavLink>}
         </div>
         <div className='link-parent'>
           <NavLink className='explore' to='/explore'>Explore</NavLink>
+          {!sessionUser &&
+            <NavLink className='demo' to='/demo'>Demo</NavLink>}
           {!sessionUser &&
           <NavLink className ='login'to="/login">Log In</NavLink>}
           {!sessionUser &&

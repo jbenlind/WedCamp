@@ -1,0 +1,18 @@
+.venue-detail-card {
+  height: 95vh;
+  width: 100vw;
+}
+
+.image {
+  display: flex;
+}
+.name {
+  font-size: 35px;
+}
+
+.venue-description {
+  justify-content: flex-start;
+  font-size: 25px;
+  width: 700px;
+  padding: 2%;
+}

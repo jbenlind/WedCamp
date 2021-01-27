@@ -5,6 +5,7 @@ import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import Explorer from './components/Explore';
 import DemoUser from './components/DemoUser';
+import FullDetails from './components/Explore/FullDetails';
 // import upComingBookings from './components/Bookings';
 
 
@@ -27,7 +28,7 @@ function App() {
           <SignupFormPage />
         </Route>
 
-        <Route path='/explore'>
+        <Route path='/explore' exact>
           <Explorer />
         </Route>
 
@@ -35,6 +36,9 @@ function App() {
           <DemoUser />
         </Route>
 
+        <Route path='/explore/:venueId'>
+          <FullDetails />
+        </Route>
       </Switch>
     </>
 
