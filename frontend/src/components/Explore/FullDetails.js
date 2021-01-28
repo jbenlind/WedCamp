@@ -28,10 +28,8 @@ const FullDetails = () => {
               <li className="city-state">{`${venue.city}, ${venue.state}`}</li>
               <li className="price">{`Average cost: $${venue.averagePrice}`}</li>
               <li className="guests">{`Max number of guests: ${venue.maxNumberGuests}`}</li>
-              <li className="host">{`Owner: ${venue.host}`}</li>
               <li className="zipcode">{`Zipcode: ${venue.zipCode}`}</li>
               <li className="gpsLocation">{`Cooridinates: ${venue.gpsLocation}`}</li>
-              {/* <li className="reservedDates">{venue.reservedDates}</li> */}
             </div>
           </div>
           <img src={venue.imgUrl} alt="hidden"></img>

@@ -1,16 +1,13 @@
 .explorer-body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    height: 94vh;
-    width: 100vw;
-    border-top: 2px solid lightgrey;
-    /* google flex diplays for columns and rows */
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows:  45% 45%;
+    height: 95vh;
+    width: 99vw;
+    justify-items: center;
+
 }
-/* make a grid */
+
 .venue-card {
     display: flex;
     flex-direction: column;
@@ -18,8 +15,8 @@
     justify-content: flex-end;
     height: 350px;
     width: 500px;
-    margin: 2%;
     color: white;
+    margin-top: 2%;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     overflow: hidden;

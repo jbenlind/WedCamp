@@ -5,9 +5,10 @@
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
-    padding: 0;
+    padding-top: 5vh;
     height: 95vh;
     width: 100vw;
+
 }
 
 .header {
