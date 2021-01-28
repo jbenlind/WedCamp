@@ -12,7 +12,7 @@ module.exports = {
         zipCode: 54664,
         maxNumberGuests: 400,
         averagePrice: 20000,
-        imgUrl:`https://cdn.wedding-spot.com/__sized__/images/venues/16725/Chapters-on-the-Horizon-Viola-WI-656b3321-c425-4fda-8b25-703a4d817069.1608224091-97450e389c42885476f1fbe9bc5bca5a.jpeg`,
+        imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/16725/Chapters-on-the-Horizon-Viola-WI-656b3321-c425-4fda-8b25-703a4d817069.1608224091-97450e389c42885476f1fbe9bc5bca5a.jpeg",
         host:"Chapters on the Horizon",
         reservedDates: null,
         createdAt: new Date(),
@@ -27,7 +27,7 @@ module.exports = {
         zipCode: 53188,
         maxNumberGuests: 300,
         averagePrice: 9000,
-        imgUrl: "https://images.cvent.com/ws/images/venues/7687/The-Loft-and-Chapel-at-Cedar-Ridge-Wedding-Waukesha-WI-1.1454666032.jpg?f=webp&unique=true&d=490",
+        imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/7687/The-Loft-and-Chapel-at-Cedar-Ridge-Waukesha-WI-6fe90302-1962-4db2-b4ec-54a5c80f31c4-97450e389c42885476f1fbe9bc5bca5a.jpeg",
         host: "Cedar Ridge",
         createdAt: new Date(),
         updatedAt: new Date()
@@ -41,7 +41,7 @@ module.exports = {
         zipCode: 53147,
         maxNumberGuests: 300,
         averagePrice: 13700,
-        imgUrl: "https://images.cvent.com/ws/images/venues/10490/The-Ridge-Hotel-Wedding-Lake-Geneva-WI-10.1486683790.jpg?f=webp&unique=true&d=490",
+        imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/10490/The-Ridge-Hotel-Lake-Geneva-WI-f73cf488-b267-4c42-85fd-2cd4bb189933-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "The Ridge Hotel",
         createdAt: new Date(),
         updatedAt: new Date()
@@ -55,7 +55,7 @@ module.exports = {
         zipCode: 53098,
         maxNumberGuests: 300,
         averagePrice: 8000,
-        imgUrl: "https://images.cvent.com/ws/images/venues/10205/Windwood-of-Watertown-Wedding-Watertown-WI-3.1485458228.jpg?f=webp&unique=true&d=490",
+        imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/10205/Windwood-of-Watertown-Watertown-WI-d5eb328a-3bd7-477f-9f52-6e3b36a81485-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Windwood",
         createdAt: new Date(),
         updatedAt: new Date()
