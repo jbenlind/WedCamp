@@ -5,8 +5,9 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    height: 95vh;
+    height: 94vh;
     width: 100vw;
+    border-top: 2px solid lightgrey;
     /* google flex diplays for columns and rows */
 }
 /* make a grid */

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import ProfileButton from './ProfileButton';
 import { logout } from '../../store/session';
 import './Navigation.css';
 
@@ -20,11 +19,11 @@ function Navigation({ isLoaded }){
   return (
     <div>
       <ul className='nav-bar'>
-          <div>
-            <label className='appName'>WedCamp</label>
+          <div className='first-fraction'>
+            <NavLink className='appName' exact to="/">WedCamp</NavLink>
             <i className="fad fa-campground"></i>
           </div>
-          <div className='link-parent'>
+          <div className='second-fraction'>
             <NavLink className='explore' to='/explore'>Explore</NavLink>
             {!sessionUser &&
               <NavLink className='demo' to='/demo'>Demo</NavLink>}
@@ -32,7 +31,6 @@ function Navigation({ isLoaded }){
             <NavLink className ='login'to="/login">Log In</NavLink>}
             {!sessionUser &&
             <NavLink className='signup' to="/signup">Sign Up</NavLink>}
-            <NavLink className='home' exact to="/">Home</NavLink>
             {sessionUser &&
             <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
           </div>
