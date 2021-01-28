@@ -32,6 +32,8 @@ function Navigation({ isLoaded }){
             {!sessionUser &&
             <NavLink className='signup' to="/signup">Sign Up</NavLink>}
             {sessionUser &&
+            <NavLink className='bookings' to='/bookings'>Bookings</NavLink>}
+            {sessionUser &&
             <div onClick={userLogout} className='logout' to='/'>Log Out</div>}
           </div>
       </ul>
