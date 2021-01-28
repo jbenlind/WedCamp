@@ -1,32 +1,168 @@
 .venue-details-page {
-  height: 90vh;
+  height: 95vh;
   width: 99vw;
+  padding-top: 5vh;
+  color: black;
 }
 
 .details-grid {
-
+  display: grid;
+  grid-template-columns: 6% 56% 26% 12%;
+  grid-template-rows: 4% 45% 19% 10% 3% 40% 3% 30% 3% 50% 2%;
+  width: 68vw;
+  margin-top: 5vh;
+  margin-left: 14.5vw;
+  overflow-y: visible;
+  background-color: rgb(177, 134, 82);
+  border-radius: 25px;
 }
 
 .image-title-container {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: rgb(177, 134, 82);
+  overflow: hidden;
+  color: white;
+}
 
+.venue-name {
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
 .bookingForm-googleMaps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background-color: white;
+  border-radius: 25px;
+  position: fixed;
+  z-index: 1;
+  height: 540px;
+  width: 406px;
+  margin-top: 16.7%;
+  margin-left: 45%;
+  text-align: center;
 
 }
 
-.venue-itmes-container {
+.price {
+   font-size: 25px;
+   padding: 4%;
+}
+.book-button {
+    margin-top: 5%;
+    height: 58px;
+    width: 210px;
+    font-size: 28px;
+    border-radius: 15px;
+    border-color: rgba(30, 130, 76, 1);
+    background-color: rgba(30, 130, 76, 1);
+    color: white;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
 
+.book-button:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 3px rgb(97, 96, 96);
+  transition: all 0.25s ease 0s;
+}
+
+.venue-items-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  background-color: white;
+  padding: 0%;
+
+}
+
+.image {
+  border-radius: 25px;
 }
 
 .description-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 6;
+  background-color: white;
+
 
 }
 
-/* .amenities-container {
+.amenities-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 8;
+  grid-row-end: 8;
+  background-color: white;
 
-} */
+}
 
-/* .reviews-container {
+.reviews-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 10;
+  background-color: white;
 
-} */
+
+}
+
+.background-cover {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 11;
+  background-color: rgb(177, 134, 82);
+
+
+}
+
+.background-cover-2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 11;
+  background-color:rgb(177, 134, 82);
+
+
+}
+
+
+.background-cover-3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 7;
+  background-color:rgb(177, 134, 82);
+
+}
+
+.background-cover-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 9;
+  background-color:rgb(177, 134, 82);
+
+}
+
+.background-cover-5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 11;
+  background-color:rgb(177, 134, 82);
+
+}

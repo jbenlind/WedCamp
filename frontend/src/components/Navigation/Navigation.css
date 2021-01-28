@@ -10,6 +10,7 @@
     padding: 0;
     position: fixed;
     border-bottom: 1px solid lightgrey;
+    z-index: 1;
 }
 
 .appName,
