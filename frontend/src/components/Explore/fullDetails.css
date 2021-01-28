@@ -1,64 +1,32 @@
-.venue-detail-page {
+.venue-details-page {
   height: 90vh;
   width: 99vw;
-  padding-top: 2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: Calibre, Helvetica, Arial, sans-serif;
-  
 }
 
-.details-card {
-  padding: 2%;
-  margin: 0;
-  width: 60vw;
-  background-color: rgb(121, 120, 108);
-  border-radius: 25px;
+.details-grid {
+
 }
 
-.image-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  color: white;
+.image-title-container {
+
 }
 
-.venue-name {
-  font-size: 40px;
+.bookingForm-googleMaps {
+
 }
 
-.venue-items {
-  padding-top: 4%;
-  padding-left: 10%;
-  font-size: 20px;
+.venue-itmes-container {
+
 }
 
-.description-booking {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: flex-start;
-  color: white;
+.description-container {
+
 }
 
-.description {
-  justify-content: flex-start;
-  font-size: 20px;
-  width: 700px;
-  padding: 2%;
-  color: white;
-}
+/* .amenities-container {
 
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  height: 250px;
-  width: 400px;
-  margin-top: 4%;
-  margin-left: 6%;
-  color: black;
-  border-radius: 25px;
-  font-family: Calibre, Helvetica, Arial, sans-serif;
-}
+} */
+
+/* .reviews-container {
+
+} */

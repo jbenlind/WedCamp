@@ -1,11 +1,20 @@
 .explorer-body {
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows:  45% 45%;
     height: 95vh;
     width: 99vw;
-    justify-items: center;
+}
 
+.grid-body {
+    display: grid;
+    grid-template-columns:33% 33% 33%;
+    grid-template-rows: 47% 47% 47% 47%;
+    height: 95vh;
+    width: 90vw;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .venue-card {
