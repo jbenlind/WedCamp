@@ -22,6 +22,10 @@
     white-space: nowrap;
 }
 
+#font-icon {
+    color: rgba(30, 130, 76, 1);
+}
+
 .first-fraction {
     display: flex;
     justify-content: center;

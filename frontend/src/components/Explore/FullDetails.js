@@ -21,35 +21,39 @@ const FullDetails = () => {
   return (
     <div className="venue-details-page">
       <div className='details-grid'>
-        <div className="image-title-container">
-          <div className='card-image' >
+        <div className='venue-detail-title'>
             <h1 className="venue-name">{venue.name}</h1>
+        </div>
+        <div className="image-container">
+          <div className='card-image' >
             <img className="image" src={venue.imgUrl} alt="hidden"></img>
           </div>
         </div>
-        <div className='bookingForm-googleMaps'>
+        <div className='bookingForm'>
           <form className='booking-form'>
-          <div className="price">{`Average price: $${venue.averagePrice}`}</div>
+          <div className='pricing'>
+            <div className="price">{`$${venue.averagePrice}`}</div>
+            <div className='price-per'>(for 50 guests)</div>
+          </div>
             <div>
               <input
-                  className='email-input'
+                  className='date-picker'
                   type="date"
-                  // value={credential}
-                  // onChange={(e) => setCredential(e.target.value)}
-                  required
-                />
+              />
             </div>
             <button className='book-button' type="submit">Book Venue</button>
           </form>
-          <div className='google-maps-api'>
-            {/* google maps box */}
-          </div>
         </div>
         <div className="venue-items-container">
-          <div className="city-state">{`Location: ${venue.city}, ${venue.state}`}</div>
-          <div className="guests">{`Max number of guests: ${venue.maxNumberGuests}`}</div>
-          {/* <li className="zipcode">{`Zipcode: ${venue.zipCode}`}</li>
-          <li className="gpsLocation">{`Cooridinates: ${venue.gpsLocation}`}</li> */}
+          <div className='item-content'>
+            <h3 className="location">Location:</h3>
+            <div className='spacer-1'></div>
+            <div className="city-state">{venue.city}, {venue.state}</div>
+            <div className='spacer-2'></div>
+            <h3 className="capacity">Capacity:</h3>
+            <div className='spacer-3'></div>
+            <div className="guests">{venue.maxNumberGuests}</div>
+          </div>
         </div>
         <div className="description-container">
           <h1 className="description-title">Description:</h1>
@@ -64,11 +68,9 @@ const FullDetails = () => {
           <h1 className="description-title">Reviews:</h1>
           {/* <div></div> for the reviews */}
         </div>
-        <div className='background-cover'></div>
-        <div className='background-cover-2'></div>
-        <div className='background-cover-3'></div>
-        <div className='background-cover-4'></div>
-        <div className='background-cover-5'></div>
+        <div className='google-maps-api'>
+            {/* google maps box */}
+        </div>
       </div>
     </div>
   );
