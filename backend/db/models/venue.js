@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     Venue.hasMany(models.Booking, { foreignKey: 'venueId'});
     Venue.hasMany(models.Review, { foreignKey: 'venueId'});
     const columnMapping = {
-      through: 'VenueAmenity',
+      foreignKey: 'venueId',
       otherKey: 'amenitiesId',
-      foreignkey: 'venueId'
+      through: 'VenueAmenity',
     }
     Venue.belongsToMany(models.Amenity, columnMapping)
   };
