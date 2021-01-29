@@ -64,32 +64,39 @@ const FullDetails = () => {
           </div>
         </div>
         <div className="description-container">
-            <h1 className="description-title">Description:</h1>
+            <h3 className="description-header">Description</h3>
             <div className="venue-description">{venue.description}</div>
         </div>
         <div className='amenities-container'>
-          <h1 className="amenities-title">Amenities:</h1>
+          <h3 className='amenity-title'>Amenities</h3>
             {venue &&
             venue.Amenities.map((amenity) => (
               <ul className="amenities-list" key={amenity.id}>
-                <li><AmenityIcon  amenity={amenity}/></li>
+                <div className='amenity-icon'><AmenityIcon  amenity={amenity}/></div>
               </ul>
             ))}
         </div>
         <div className='reviews-container'>
-          <h1 className="description-title">Reviews:</h1>
+          <h3 className="review-header">Reviews</h3>
           {venue &&
           venue.Reviews.map((review) => (
             <div className="review" key={review.id}>
-              <ul>
-                <li>UserName</li>
-                {/* <li>{user.userName}</li> */}
-                {review.verifiedBooking &&
-                <li>Verified booking<i className="fas fa-check-square"></i></li>}
-                <li>{review.title}</li>
-                <li>{review.body}</li>
-                <li>{`${review.rating}/10`}</li>
-              </ul>
+              <table className="review-table">
+                <tbody>
+                  <tr>
+                    <td id="row-1">UserName</td>
+                    {review.verifiedBooking ?
+                    <td id="row-1">Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : ""}
+                    <td id="row-1">{`Rating:${review.rating}/10`}</td>
+                  </tr>
+                  <tr>
+                    <td className="row-2">{review.title}</td>
+                  </tr>
+                  <tr>
+                    <td colSpan='3'>{review.body}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           ))}
         </div>

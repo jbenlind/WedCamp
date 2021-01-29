@@ -5,19 +5,19 @@ const AmenityIcon = ({amenity}) => {
     let component;
     switch(amenity.name) {
         case "Indoor seating":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i className="fas fa-chair"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-chair"></i></div>)
             break;
         case "Wifi":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i className="fas fa-wifi"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-wifi"></i></div>)
             break;
         case "Parking":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i className="fas fa-parking"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-parking"></i></div>)
             break;
         case "Yard games":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i className="fas fa-game-board"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-game-board"></i></div>)
             break;
         case "Prep kitchen":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i className="fas fa-knife-kitchen"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-knife-kitchen"></i></div>)
             break;
         case "Restrooms":
             component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="far fa-toilet"></i></div>)
@@ -53,7 +53,7 @@ const AmenityIcon = ({amenity}) => {
             component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="far fa-tint"></i></div>)
             break;
         case "Stage":
-            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="far fa-podium"></i></div>)
+            component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="fas fa-podium"></i></div>)
             break;
         case "Smoking allowed":
             component = (<div id="amenity-line"><p>{amenity.name}</p><i id="amenity-icon" className="far fa-smoking"></i></div>)
