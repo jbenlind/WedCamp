@@ -22,7 +22,7 @@
 //         <nav>
 //           <h1>Grocery Store</h1>
 //           <button className="bookings-button" onClick={() => setShowBookings(true)}>
-//             <i class="fal fa-address-book"></i>/
+//             <i className="fal fa-address-book"></i>/
 //             Checkout
 //           </button>
 //         </nav>

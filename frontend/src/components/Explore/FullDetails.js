@@ -64,15 +64,17 @@ const FullDetails = () => {
           </div>
         </div>
         <div className="description-container">
-          <h1 className="description-title">Description:</h1>
-          <div className="venue-description">{venue.description}</div>
+            <h1 className="description-title">Description:</h1>
+            <div className="venue-description">{venue.description}</div>
         </div>
         <div className='amenities-container'>
-          <h1 className="description-title">Amenities:</h1>
-          {venue &&
-          venue.Amenities.map((amenity) => (
-            <li><AmenityIcon  amenity={amenity}/></li>
-          ))}
+          <h1 className="amenities-title">Amenities:</h1>
+            {venue &&
+            venue.Amenities.map((amenity) => (
+              <ul className="amenities-list" key={amenity.id}>
+                <li><AmenityIcon  amenity={amenity}/></li>
+              </ul>
+            ))}
         </div>
         <div className='reviews-container'>
           <h1 className="description-title">Reviews:</h1>
@@ -80,10 +82,13 @@ const FullDetails = () => {
           venue.Reviews.map((review) => (
             <div className="review" key={review.id}>
               <ul>
-                <li>{review.verifiedBooking}</li>
+                <li>UserName</li>
+                {/* <li>{user.userName}</li> */}
+                {review.verifiedBooking &&
+                <li>Verified booking<i className="fas fa-check-square"></i></li>}
                 <li>{review.title}</li>
                 <li>{review.body}</li>
-                <li>{review.rating}</li>
+                <li>{`${review.rating}/10`}</li>
               </ul>
             </div>
           ))}

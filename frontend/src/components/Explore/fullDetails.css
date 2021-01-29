@@ -15,7 +15,7 @@
   margin-top: 10vh;
   margin-left: 16vw;
   overflow-y: visible;
-  background-color: #d8d7c3;
+  background-color: #afafa2;
   border-radius: 25px;
 }
 
@@ -121,8 +121,9 @@
 
 .book-button:hover {
   cursor: pointer;
-  background-color: black;
-  color: white;
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 3px rgb(97, 96, 96);
+  transition: all 0.25s ease 0s;
 }
 
 .venue-items-container {
@@ -163,13 +164,13 @@
   grid-row-end: 6;
   background-color: white;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 19px;
   padding: 2%;
 
 }
 
 .description-title {
-  font-size: 30px;
+  font-size: 22px;
   margin-bottom: 1%;
 }
 
@@ -179,11 +180,38 @@
   grid-row-start: 8;
   grid-row-end: 8;
   background-color: white;
-  border-radius: 25px;
-  padding: 1%;
-  border-color: black
+  border-radius: 23px;
+  padding-left: 2%;
+  font-size: 19px;
+  display:grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-template-rows: 33% 33% 33%;
+  overflow-y: scroll;
 
 }
+
+.amenities-title {
+  font-size: 22px;
+  width: 100%;
+}
+
+.amenities-list {
+  display: flex;
+}
+
+#amenity-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+
+#amenity-icon {
+  color: rgba(30, 130, 76, 1);
+
+}
+
+
 
 .google-maps-api {
   grid-column-start: 2;
@@ -201,10 +229,17 @@
   grid-row-end: 12;
   background-color: white;
   border-radius: 25px;
-  padding: 1%;
+  padding: 2%;
+  overflow-y: scroll;
+  font-size: 19px;
 
 }
 
 .review {
  color: black;
+}
+
+.fas {
+  color: rgba(30, 130, 76, 1);
+  font-size: 23px;
 }
