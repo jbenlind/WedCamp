@@ -18,7 +18,7 @@ const Explorer = () => {
             <div className='grid-body'>
                 {venues &&
                 venues.map((venue) => (
-                    <Link className ='card-link' to={`/explore/${venue.id}`}>
+                    <Link className ='card-link' key={venue.id} to={`/explore/${venue.id}`}>
                         <div className="venue-card" value={venue.id} key={venue.id}
                             style={ {backgroundImage: `url(${venue.imgUrl})`}}>
                             <div className='card-title'>{venue.name}</div>

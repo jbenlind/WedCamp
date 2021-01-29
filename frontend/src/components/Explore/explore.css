@@ -6,12 +6,11 @@
 .grid-body {
     display: grid;
     grid-template-columns:33% 33% 33%;
-    width: 90vw;
+    width: 86vw;
     justify-items: center;
     justify-content: center;
     padding-top: 5%;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 6.5vw;
 
 }
 

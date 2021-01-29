@@ -88,6 +88,24 @@
   cursor: pointer;
 }
 
+.guest-picker {
+  height: 46px;
+  width: 200px;
+  padding:5px;
+  margin: 1%;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  font-size: 23px;
+  border-color: rgba(0, 0, 0, .8) ;
+  cursor: pointer;
+}
+
+.guest-picker::placeholder {
+  font-size: 20px;
+  color: rgba(0, 0, 0, .8);
+}
+
 .book-button {
     margin-top: 4%;
     height: 54px;
@@ -184,4 +202,9 @@
   background-color: white;
   border-radius: 25px;
   padding: 1%;
+
+}
+
+.review {
+ color: black;
 }
