@@ -15,7 +15,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      gpsLocation: {
+      latitude: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      longitude: {
         allowNull: false,
         type: Sequelize.STRING
       },

@@ -19,4 +19,13 @@ router.get(
   })
 );
 
+router.get(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const venueId = parseInt(req.params.id, 10)
+    const venues = await Venue.findByPk(venueId)
+    res.json(venues);
+  })
+);
+
 module.exports = router;
