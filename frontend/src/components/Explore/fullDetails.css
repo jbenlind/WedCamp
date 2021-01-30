@@ -1,22 +1,24 @@
 .venue-details-page {
   height: 95vh;
   width: 99vw;
-  padding-top: 5vh;
+  padding-top: 1vh;
   color: black;
   font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 
 .details-grid {
   display: grid;
-  grid-template-columns: 6% 27.5% 1% 27.5% 20% 18%;
-  grid-template-rows: .5% 3% 11% 11% 3.5% 18% 1% 21% 1% 27.5% 1.5%;
-  width: 68vw;
+  grid-template-columns: 5.5% 31.5% 1% 23.5% 20% 18.5%;
+  grid-template-rows: .5% 3% 11% 11% 3.5% 18% 1% 21% 1% auto 1.5%;
+                                                    /* try auto for infinite size */
+  width: 66vw;
   height: 200vh;
   margin-top: 10vh;
   margin-left: 16vw;
   overflow-y: visible;
-  background-color: #afafa2;
   border-radius: 25px;
+
+
 }
 
 .venue-detail-title {
@@ -54,67 +56,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(93, 92, 72);
-  border-radius: 25px;
+  border-radius: 15px;
   position: fixed;
   z-index: 1;
-  height: 400px;
-  width: 398px;
-  margin-top: 20%;
-  margin-left: 43.5%;
+  height: 36vh;
+  width: 16vw;
+  margin-top: 22%;
+  margin-left: 42.3%;
   text-align: center;
-  color: white;
+  color: black;
+  box-shadow:5px 5px 10px black;
+  background-color: white;
+  border: 1px solid lightgrey ;
+
 }
 
 .pricing {
-   margin-top:  10%;
+   margin-top:  6%;
    margin-bottom: 4%;
 }
 
 .price {
-  font-size: 27px;
+  font-size: 26px;
 }
 
 .date-picker {
-  height: 46px;
-  width: 200px;
+  height: 5vh;
+  width: 60%;
   padding:5px;
   margin: 3%;
-  border-radius: 25px;
+  border-radius: 15px;
   outline: none;
   text-align: center;
   font-size: 23px;
-  border-color: rgba(0, 0, 0, .8) ;
+  border-color: rgba(0, 0, 0, .7) ;
   cursor: pointer;
 }
 
 .guest-picker {
-  height: 46px;
-  width: 200px;
+  height: 5vh;
+  width: 60%;
   padding:5px;
   margin: 1%;
-  border-radius: 25px;
+  border-radius: 15px;
   outline: none;
   text-align: center;
   font-size: 23px;
-  border-color: rgba(0, 0, 0, .8) ;
+  border-color: rgba(0, 0, 0, .7) ;
   cursor: pointer;
 }
 
 .guest-picker::placeholder {
-  font-size: 20px;
-  color: rgba(0, 0, 0, .8);
+  font-size: 19px;
+  color: rgba(0, 0, 0, .9);
 }
 
+
 .book-button {
-    margin-top: 4%;
-    height: 54px;
-    width: 305px;
-    font-size: 28px;
+    margin-top: 5%;
+    height: 7vh;
+    width: 75%;
+    font-size: 26px;
     border-radius: 15px;
-    border-color: rgba(0, 0, 0, .8);
-    background-color: white;
-    color: black;
+    background-color: rgba(30, 130, 76, 1);
+    color: white;
     text-align: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
 }
@@ -163,12 +168,14 @@
   grid-row-start: 6;
   grid-row-end: 6;
   background-color: white;
-  border-radius: 25px;
-  font-size: 19px;
+  font-size: 18px;
   padding: 2%;
-  overflow: auto;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  box-shadow:1px 1px 10px lightgrey;
 
 }
+
 
 .description-header {
   display: flex;
@@ -184,9 +191,11 @@
   grid-row-start: 8;
   grid-row-end: 8;
   background-color: white;
-  border-radius: 25px;
   width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 25px;
   overflow-y:auto;
+  box-shadow:1px 1px 10px lightgrey;
 }
 
 .amenities-list, .amenity-title {
@@ -199,7 +208,7 @@
   padding-bottom: 3%;
   padding-top: 2%;
   padding-left: 35%;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #amenity-line {
@@ -207,13 +216,13 @@
   flex-direction: row;
   font-size: 25px;
   padding: 3%;
-  padding-left: 9%;
+  padding-left: 5%;
 
 }
 
 #amenity-icon {
   color: black;
-  padding-left: 5px;
+  padding-right: 10px;
 }
 
 .google-maps-api {
@@ -222,7 +231,9 @@
   grid-row-start: 8;
   grid-row-end: 9;
   background-color: white;
+  border: 1px solid lightgray;
   border-radius: 25px;
+  box-shadow:1px 1px 10px lightgrey;
 }
 
 .reviews-container {
@@ -231,11 +242,12 @@
   grid-row-start: 10;
   grid-row-end: 11;
   background-color: white;
+  border: 1px solid lightgray;
   border-radius: 25px;
   padding: 2%;
-  overflow-y:auto;
   font-size: 19px;
   color: black;
+  box-shadow:1px 1px 10px lightgrey;
 }
 
 .review-header {
@@ -266,4 +278,19 @@
 #checkmark {
   color: rgba(30, 130, 76, 1);
   font-size: 23px;
+}
+
+.reviews-container::-webkit-scrollbar {
+  width: 12px;
+  height: 15px;           /* width of the entire scrollbar */
+}
+
+.reviews-container::-webkit-scrollbar-track {
+  background: blue;        /* color of the tracking area */
+}
+
+.reviews-container::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
 }

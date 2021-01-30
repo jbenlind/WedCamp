@@ -22,7 +22,7 @@ const DemoUser = () => {
             <div className='demo-form'>
                 <h3 className='demoForm-title'>Test out WedCamp!</h3>
                 <p className='demoForm-text'>Feel free to try out WedCamp without having to enter any information. Your dream venue is only a click away!</p>
-                <button className='demo-button' type="submit">Enter<i className="fad fa-campground"></i></button>
+                <button className='demo-button' type="submit">Enter<i id="demoIcon" className="fad fa-campground"></i></button>
                 <NavLink className='redirect-demo' to='/signup'>Want to make an account?</NavLink>
             </div>
         </form>

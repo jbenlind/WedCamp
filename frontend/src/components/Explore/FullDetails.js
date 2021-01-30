@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
 import "./fullDetails.css";
@@ -8,7 +9,7 @@ import "./fullDetails.css";
 const FullDetails = () => {
   const dispatch = useDispatch();
   const { venueId } = useParams();
-
+// o useState for guests
   useEffect(() => {
     dispatch(venueActions.getVenueInfo());
   }, [dispatch]);
@@ -46,10 +47,11 @@ const FullDetails = () => {
                 type='number'
                 placeholder="Guests(below cap)"
               // controlled input for error on over cap
+              // max
               />
 
             </div>
-            <button className='book-button' type="submit">Book Venue</button>
+            <button className='book-button' type="submit">Request Venue</button>
           </form>
         </div>
         <div className="venue-items-container">
@@ -64,8 +66,10 @@ const FullDetails = () => {
           </div>
         </div>
         <div className="description-container">
+          <div className="description-box">
             <h3 className="description-header">Description</h3>
             <div className="venue-description">{venue.description}</div>
+          </div>
         </div>
         <div className='amenities-container'>
           <h3 className='amenity-title'>Amenities</h3>
@@ -84,7 +88,7 @@ const FullDetails = () => {
               <table className="review-table">
                 <tbody>
                   <tr>
-                    <td id="row-1">UserName</td>
+                    <td id="row-1">{review.User.username}</td>
                     {review.verifiedBooking ?
                     <td id="row-1">Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : ""}
                     <td id="row-1">{`Rating:${review.rating}/10`}</td>
