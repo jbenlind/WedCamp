@@ -1,6 +1,6 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
-const { Venue, Review, Amenity } = require("../../db/models");
+const { Venue, Review, Amenity, User } = require("../../db/models");
 
 const router = express.Router();
 
@@ -9,7 +9,8 @@ router.get(
   asyncHandler(async (req, res) => {
     const venues = await Venue.findAll({
       include: [
-        {model: Review},
+        {model: Review,
+        include: {model:User}},
         {model: Amenity, through: {attributes: []}}
       ]}
 
