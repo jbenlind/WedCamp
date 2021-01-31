@@ -34,7 +34,7 @@ function ReviewFormModal({setShowModal}) {
                     />
                 </div>
                 <div className="x-button-container">
-                    <button id="close-button" onClick={(e) => setShowModal(false)}><i id="close-icon" class="far fa-window-close"></i></button>
+                    <button id="close-button" onClick={(e) => setShowModal(false)}><i id="close-icon" className="far fa-window-close"></i></button>
                 </div>
                 <div className="submit-button-holder">
                     <button id="submit-button" onClick={(e) => setShowModal(false)}>Submit</button>

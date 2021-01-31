@@ -8,7 +8,7 @@ import ReviewFormModal from '../modal'
 import "./fullDetails.css";
 
 const FullDetails = () => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const dispatch = useDispatch();
   const { venueId } = useParams();
