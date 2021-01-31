@@ -1,4 +1,25 @@
+.search-body {
+    height: 95vh;
+    width: 100%;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+}
+
+.search-grid-body {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 86vw;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    margin-left: 6.5vw;
+    padding-bottom: 3.4%;
+}
+
 .search-header {
-    font-size: 50px;
-    color: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    padding-top: 6%;
+
 }

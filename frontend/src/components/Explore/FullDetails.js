@@ -85,27 +85,27 @@ const FullDetails = () => {
         </div>
         <div className='amenities-container'>
           <h3 className='amenity-title'>Amenities</h3>
-            {venue &&
-            venue.Amenities.map((amenity) => (
-              <ul className="amenities-list" key={amenity.id}>
-                <div className='amenity-icon'><AmenityIcon  amenity={amenity}/></div>
-              </ul>
-            ))}
+          {venue.Amenities &&
+          venue.Amenities.map((amenity) => (
+            <ul className="amenities-list" key={amenity.id}>
+              <div className='amenity-icon'><AmenityIcon  amenity={amenity}/></div>
+            </ul>
+          ))}
         </div>
         <div className='reviews-container'>
           <div className="review-header-container">
             <h3 className="review-header">Reviews</h3>
             <button onClick={(event) => {setShowModal(true); console.log(showModal)}} className="review-button">Add a review</button>
           </div>
-          {venue &&
+          {venue.Reviews &&
           venue.Reviews.map((review) => (
             <div className="review" key={review.id}>
               <table className="review-table">
                 <tbody>
                   <tr>
-                    <td id="row-1">{review.User.username}</td>
+                    <td id="row-1" className="revew-userName">{review.User.username}</td>
                     {review.verifiedBooking ?
-                    <td id="row-1">Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : ""}
+                    <td id="row-1">Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <p>Not Verified</p>}
                     <td id="row-1">{`Rating:${review.rating}/10`}</td>
                   </tr>
                   <tr>

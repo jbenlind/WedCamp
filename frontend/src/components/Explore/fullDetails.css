@@ -17,7 +17,7 @@
   margin-left: 25%;
   overflow-y: visible;
   border-radius: 25px;
-  padding-bottom: 3.4%;
+  padding-bottom: 12.2%;
 }
 
 .venue-detail-title {
@@ -285,6 +285,7 @@
 }
 
 #row-1 {
+  display: flex;
   font-weight: bold;
   font-size: 21px;
   padding-bottom: 3%;
@@ -298,19 +299,4 @@
 #checkmark {
   color: rgba(30, 130, 76, 1);
   font-size: 23px;
-}
-
-.reviews-container::-webkit-scrollbar {
-  width: 12px;
-  height: 15px;           /* width of the entire scrollbar */
-}
-
-.reviews-container::-webkit-scrollbar-track {
-  background: blue;        /* color of the tracking area */
-}
-
-.reviews-container::-webkit-scrollbar-thumb {
-  background-color: blue;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid orange;  /* creates padding around scroll thumb */
 }

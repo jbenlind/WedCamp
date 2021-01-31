@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import configureStore from './store';
 import { restoreCSRF } from './store/csrf';
-import { Modal, ModalProvider } from './context/modal';
+import { ModalProvider } from './context/modal';
 
 
 const store = configureStore();
