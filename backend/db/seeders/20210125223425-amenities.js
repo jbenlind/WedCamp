@@ -64,11 +64,6 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: "Flatware ",
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
         name: "Venue planner",
         createdAt: new Date(),
         updatedAt: new Date()
