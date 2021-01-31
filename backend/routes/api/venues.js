@@ -1,6 +1,9 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
 const { Venue, Review, Amenity, User } = require("../../db/models");
+const sequelize = require("sequelize");
+
+const Op = sequelize.Op;
 
 const router = express.Router();
 
@@ -18,6 +21,22 @@ router.get(
     res.json(venues);
   })
 );
+
+router.get(
+  "/search/:query",
+  asyncHandler(async (req, res) => {
+    const query = req.params.query;
+
+    const results = await Venue.findAll({
+      where : {
+        city: {
+          [Op.iLike] : `%${query}%`
+        }
+      }
+    })
+    res.json(results);
+  })
+)
 
 router.get(
   "/:id",
