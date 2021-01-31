@@ -235,6 +235,14 @@
   border: 1px solid lightgray;
   border-radius: 25px;
   box-shadow:1px 1px 10px lightgrey;
+  width: 100%;
+  height:100%;
+}
+
+.the-map {
+ margin-left: 4%;
+ margin-top: 1%;
+ border-radius: 25px;
 }
 
 .reviews-container {

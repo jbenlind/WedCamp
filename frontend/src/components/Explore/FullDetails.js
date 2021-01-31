@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
-// import  Map  from '../map';
+import GoogleMap from '../map/index';
 import ReviewFormModal from '../modal'
 import "./fullDetails.css";
 
@@ -12,7 +12,7 @@ const FullDetails = () => {
 
   const dispatch = useDispatch();
   const { venueId } = useParams();
-// o useState for guests
+
   useEffect(() => {
     dispatch(venueActions.getVenueInfo());
   }, [dispatch]);
@@ -22,10 +22,6 @@ const FullDetails = () => {
   let venue;
   if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
   if (!venue) return null;
-
-  // const showReviewForm = () => {
-  //   setShowModal(true);
-  // }
 
   return (
     <>
@@ -81,7 +77,9 @@ const FullDetails = () => {
           </div>
         </div>
         <div className='google-maps-api'>
-            {/* <Map /> */}
+          <div className="the-map">
+            {venue.latitude && <GoogleMap venue={venue} />}
+          </div>
         </div>
         <div className='amenities-container'>
           <h3 className='amenity-title'>Amenities</h3>
@@ -105,7 +103,7 @@ const FullDetails = () => {
                   <tr className="row-1">
                     <td className="revew-userName">{review.User.username}</td>
                     {review.verifiedBooking ?
-                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <h4 className="verified">Not Verified</h4>}
+                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <p className="verified">Not Verified</p>}
                     <td>{`Rating:${review.rating}/10`}</td>
                   </tr>
                   <tr>
