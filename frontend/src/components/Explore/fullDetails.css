@@ -17,7 +17,7 @@
   margin-left: 25%;
   overflow-y: visible;
   border-radius: 25px;
-  padding-bottom: 12.2%;
+  padding-bottom: 3.4%;
 }
 
 .venue-detail-title {
@@ -237,7 +237,6 @@
   box-shadow:1px 1px 10px lightgrey;
 }
 
-
 .reviews-container {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -250,6 +249,7 @@
   font-size: 19px;
   color: black;
   box-shadow:1px 1px 10px lightgrey;
+
 }
 
 .review-header-container {
@@ -282,10 +282,21 @@
   padding-top: 2%;
   padding-bottom: 2%;
   border-bottom: 1px solid black;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
 }
 
-#row-1 {
+.verified {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.row-1 {
   display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-evenly;
   font-weight: bold;
   font-size: 21px;
   padding-bottom: 3%;
@@ -293,6 +304,7 @@
 
 .row-2 {
   font-size: 21px;
+  font-weight:550;
   padding-bottom: 3%;
 }
 

@@ -102,14 +102,14 @@ const FullDetails = () => {
             <div className="review" key={review.id}>
               <table className="review-table">
                 <tbody>
-                  <tr>
-                    <td id="row-1" className="revew-userName">{review.User.username}</td>
+                  <tr className="row-1">
+                    <td className="revew-userName">{review.User.username}</td>
                     {review.verifiedBooking ?
-                    <td id="row-1">Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <p>Not Verified</p>}
-                    <td id="row-1">{`Rating:${review.rating}/10`}</td>
+                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <h4 className="verified">Not Verified</h4>}
+                    <td>{`Rating:${review.rating}/10`}</td>
                   </tr>
                   <tr>
-                    <td className="row-2">{review.title}</td>
+                    <td className="row-2">Title: {review.title}</td>
                   </tr>
                   <tr>
                     <td colSpan='3'>{review.body}</td>
