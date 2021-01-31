@@ -40,9 +40,6 @@ const AmenityIcon = ({amenity}) => {
         case "Sound system":
             component = (<div id="amenity-line"><i id="amenity-icon" className="fas fa-speakers"></i><p>{amenity.name}</p></div>)
             break;
-        case "Flatware":
-            component = (<div id="amenity-line"><i id="amenity-icon" className="far fa-utensil-fork"></i><p>{amenity.name}</p></div>)
-            break;
         case "Venue planner":
             component = (<div id="amenity-line"><i id="amenity-icon" className="far fa-clipboard"></i><p>{amenity.name}</p></div>)
             break;
