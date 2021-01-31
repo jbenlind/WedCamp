@@ -12,7 +12,7 @@ export const setBookings = (bookings) => {
 export const createBooking = (description, dates, userId) => {
     return async dispatch => {
         const res = await fetch(`/api/bookings/${userId}`, {
-            method: "post",
+            method: "POST",
             headers : {
                 "Content-Type": "application/json",
             },

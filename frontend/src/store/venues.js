@@ -9,7 +9,8 @@ const setContent = (venues) => ({
 
 export const getVenueInfo = () => async (dispatch) => {
     const response = await fetch("/api/venues/");
-    dispatch(setContent(response.data))
+    dispatch(setContent(response.data));
+    return response;
 }
 
 const venueInfoReducer = (state = [], action) => {

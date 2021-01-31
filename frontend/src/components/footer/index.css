@@ -1,0 +1,23 @@
+.footer {
+    height: 4vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+}
+
+#footer-content {
+    color: rgba(30, 130, 76, 1);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#footer-content:hover {
+    text-decoration: underline;
+
+}

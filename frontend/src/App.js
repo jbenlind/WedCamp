@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import Explorer from './components/Explore';
 import DemoUser from './components/DemoUser';
 import FullDetails from './components/Explore/FullDetails';
+import Footer from './components/footer';
 // import upComingBookings from './components/Bookings';
 
 
@@ -40,6 +41,7 @@ function App() {
           <FullDetails />
         </Route>
       </Switch>
+      <Footer />
     </>
 
   );

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
+import  Map  from '../map';
 import "./fullDetails.css";
 
 const FullDetails = () => {
@@ -105,7 +105,7 @@ const FullDetails = () => {
           ))}
         </div>
         <div className='google-maps-api'>
-            {/* google maps box */}
+            {/* <Map /> */}
         </div>
       </div>
     </div>

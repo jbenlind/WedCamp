@@ -20,8 +20,7 @@ function Navigation({ isLoaded }){
     <div>
       <ul className='nav-bar'>
           <div className='first-fraction'>
-            <NavLink className='appName' exact to="/">WedCamp</NavLink>
-            <i id='font-icon' className="fad fa-campground"></i>
+            <NavLink className='appName' exact to="/">WedCamp<i id='font-icon' className="fad active fa-campground"></i></NavLink>
           </div>
           <div className='second-fraction'>
             <NavLink className='explore' to='/explore'>Explore</NavLink>

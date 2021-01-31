@@ -1,6 +1,6 @@
 .explorer-body {
     height: 95vh;
-    width: 99vw;
+    width: 100%;
 }
 
 .grid-body {
@@ -9,8 +9,9 @@
     width: 86vw;
     justify-items: center;
     justify-content: center;
-    padding-top: 5%;
+    padding-top: 7%;
     margin-left: 6.5vw;
+    padding-bottom: 3.4%;
 
 }
 

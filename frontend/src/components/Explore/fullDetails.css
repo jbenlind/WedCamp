@@ -1,6 +1,6 @@
 .venue-details-page {
   height: 95vh;
-  width: 99vw;
+  width: 100%;
   padding-top: 1vh;
   color: black;
   font-family: Calibre, Helvetica, Arial, sans-serif;
@@ -8,17 +8,16 @@
 
 .details-grid {
   display: grid;
-  grid-template-columns: 5.5% 31.5% 1% 23.5% 20% 18.5%;
+  grid-template-columns: 47% 1% 30% 22%;
   grid-template-rows: .5% 3% 11% 11% 3.5% 18% 1% 21% 1% auto 1.5%;
                                                     /* try auto for infinite size */
-  width: 66vw;
+  width: 50%;
   height: 200vh;
-  margin-top: 10vh;
-  margin-left: 16vw;
+  margin-top: 5%;
+  margin-left: 25%;
   overflow-y: visible;
   border-radius: 25px;
-
-
+  padding-bottom: 3.4%;
 }
 
 .venue-detail-title {
@@ -26,15 +25,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2;
+  margin-left: 25%;
 }
 
 .image-container {
-  grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 5;
   overflow: hidden;
@@ -62,7 +62,7 @@
   height: 36vh;
   width: 16vw;
   margin-top: 22%;
-  margin-left: 42.3%;
+  margin-left: 40%;
   text-align: center;
   color: black;
   box-shadow:5px 5px 10px black;
@@ -132,8 +132,8 @@
 }
 
 .venue-items-container {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 5;
   text-align: center;
@@ -155,6 +155,7 @@
 .location, .capacity {
   font-size: 23px;
 }
+
 .spacer-1, .spacer-3 {
   width: 5px;
 }
@@ -162,9 +163,10 @@
 .spacer-2 {
   width: 30px;
 }
+
 .description-container {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 6;
   grid-row-end: 6;
   background-color: white;
@@ -176,7 +178,6 @@
 
 }
 
-
 .description-header {
   display: flex;
   flex-direction: row;
@@ -186,8 +187,8 @@
 }
 
 .amenities-container {
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row-start: 8;
   grid-row-end: 8;
   background-color: white;
@@ -214,9 +215,9 @@
 #amenity-line {
   display: flex;
   flex-direction: row;
-  font-size: 25px;
+  font-size: 20px;
   padding: 3%;
-  padding-left: 5%;
+  padding-left: 8%;
 
 }
 
@@ -226,8 +227,8 @@
 }
 
 .google-maps-api {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row-start: 8;
   grid-row-end: 9;
   background-color: white;
@@ -237,8 +238,8 @@
 }
 
 .reviews-container {
-  grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 10;
   grid-row-end: 11;
   background-color: white;
