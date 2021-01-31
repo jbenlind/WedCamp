@@ -124,7 +124,7 @@
     font-family: Calibre, Helvetica, Arial, sans-serif;
 }
 
-.book-button:hover {
+.book-button:hover, .review-button:hover {
   cursor: pointer;
   transform: translateY(-3px);
   box-shadow: 3px 3px 3px rgb(97, 96, 96);
@@ -237,6 +237,7 @@
   box-shadow:1px 1px 10px lightgrey;
 }
 
+
 .reviews-container {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -251,12 +252,30 @@
   box-shadow:1px 1px 10px lightgrey;
 }
 
-.review-header {
+.review-header-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 1%;
+}
+
+.review-header {
   font-size: 25px;
-  padding-bottom: 1%;
+  padding-bottom: 1.5%;
+}
+
+.review-button {
+    height: 35px;
+    width: 20%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgba(30, 130, 76, 1);
+    color: white;
+    text-align: center;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    margin-bottom: 1.5%;
 }
 
 .review-table {

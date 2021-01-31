@@ -7,6 +7,7 @@ import Explorer from './components/Explore';
 import DemoUser from './components/DemoUser';
 import FullDetails from './components/Explore/FullDetails';
 import Footer from './components/footer';
+import SearchResults from './components/SearchResults';
 // import upComingBookings from './components/Bookings';
 
 
@@ -40,6 +41,11 @@ function App() {
         <Route path='/explore/:venueId'>
           <FullDetails />
         </Route>
+
+        <Route path="/searchResults">
+          <SearchResults />
+        </Route>
+
       </Switch>
       <Footer />
     </>

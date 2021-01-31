@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
-import  Map  from '../map';
+// import  Map  from '../map';
+import ReviewFormModal from '../modal'
 import "./fullDetails.css";
 
 const FullDetails = () => {
+  const [showModal, setShowModal] = useState(true);
+
   const dispatch = useDispatch();
   const { venueId } = useParams();
 // o useState for guests
@@ -20,7 +23,13 @@ const FullDetails = () => {
   if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
   if (!venue) return null;
 
+  // const showReviewForm = () => {
+  //   setShowModal(true);
+  // }
+
   return (
+    <>
+    {showModal && <ReviewFormModal setShowModal={setShowModal} />}
     <div className="venue-details-page">
       <div className='details-grid'>
         <div className='venue-detail-title'>
@@ -71,6 +80,9 @@ const FullDetails = () => {
             <div className="venue-description">{venue.description}</div>
           </div>
         </div>
+        <div className='google-maps-api'>
+            {/* <Map /> */}
+        </div>
         <div className='amenities-container'>
           <h3 className='amenity-title'>Amenities</h3>
             {venue &&
@@ -81,7 +93,10 @@ const FullDetails = () => {
             ))}
         </div>
         <div className='reviews-container'>
-          <h3 className="review-header">Reviews</h3>
+          <div className="review-header-container">
+            <h3 className="review-header">Reviews</h3>
+            <button onClick={(event) => {setShowModal(true); console.log(showModal)}} className="review-button">Add a review</button>
+          </div>
           {venue &&
           venue.Reviews.map((review) => (
             <div className="review" key={review.id}>
@@ -104,11 +119,9 @@ const FullDetails = () => {
             </div>
           ))}
         </div>
-        <div className='google-maps-api'>
-            {/* <Map /> */}
-        </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ import './index.css';
 import App from './App';
 import configureStore from './store';
 import { restoreCSRF } from './store/csrf';
+import { Modal, ModalProvider } from './context/modal';
 
 
 const store = configureStore();
@@ -18,9 +19,11 @@ if (process.env.NODE_ENV !== "production") {
 function Root() {
   return (
     <ReduxProvider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ModalProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ModalProvider>
     </ReduxProvider>
   );
 }
