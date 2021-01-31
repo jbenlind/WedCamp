@@ -155,7 +155,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        name: "Madison Museum of Contemporary Art",
+        name: "Madison Museum of Art",
         description: "Located in the heart of downtown Madison, MMoCA’s outdoor Sculpture Garden combines the rustic feel of an outdoor wedding with chic sophistication. Madison’s skyline serves as a one-of-a-kind backdrop for a one-of-a-kind day. Featuring bird’s eye views of the Capitol, colorful garden beds, and large-scale outdoor sculptures lit by the starry night sky, MMoCA is one of Madison’s architectural gems and the perfect spot for all types of celebrations of love, including wedding ceremonies, receptions, rehearsal dinners, engagement parties, and brunches.",
         latitude: "43.07510",
         longitude: "-89.38927",
