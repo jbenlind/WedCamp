@@ -13,7 +13,7 @@ const FullDetails = () => {
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const [bookingDate, setBookingDate] = useState("");
-  const [numGuests, setNumGuests] = useState(0);
+  // const [numGuests, setNumGuests] = useState(0);
 
   const dispatch = useDispatch();
   const { venueId } = useParams();
@@ -68,8 +68,8 @@ const FullDetails = () => {
                 className="guest-picker"
                 type='number'
                 placeholder="Guests(below cap)"
-                value={numGuests}
-                onChange={(event) => setNumGuests(event.target.value)}
+                // value={numGuests}
+                // onChange={(event) => setNumGuests(event.target.value)}
               />
 
             </div>

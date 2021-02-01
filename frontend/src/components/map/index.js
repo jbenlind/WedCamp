@@ -13,14 +13,14 @@ const GoogleMap = ({venue}) => {
           lat: Number(venue.latitude),
           lng: Number(venue.longitude)
         },
-        zoom: 3
+        zoom: 9
     }
             return (
               <div className="map" style={{ height: '420px', width: '450px', borderRadius: "25px" }}>
                 <GoogleMapReact
                   bootstrapURLKeys={{ key: "AIzaSyAoO7BkNknLbtgbKd7O-UufuNTtufJ6FTo" }}
                   center={defaultProps.center}
-                  defaultZoom={13}
+                  defaultZoom={9}
                 >
                 <Pin lat={defaultProps.center.lat} lng={defaultProps.center.lng}/>
                 </GoogleMapReact>
