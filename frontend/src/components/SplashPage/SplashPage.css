@@ -42,7 +42,7 @@
     margin-top: 3%;
     margin-left: 33%;
     margin-right: 33%;
-    border-radius: 40px;
+    border-radius: 60px;
 
 }
 
@@ -52,7 +52,7 @@
     padding: 5px;
     margin: 2%;
     border: none;
-    border-radius: 25px;
+    border-radius: 65px;
     outline: none;
     padding-left: 15px;
     font-size: 25px;
@@ -64,7 +64,7 @@
     padding: 5px;
     margin: 2%;
     border: none;
-    border-radius: 25px;
+    border-radius: 65px;
     outline: none;
     text-align: center;
     font-size: 23px;
@@ -72,11 +72,11 @@
 
 .search-button {
     height: 47%;
-    width: 10%;
+    width: 8%;
     padding: 5px;
     margin: 2%;
     border: none;
-    border-radius: 25px;
+    border-radius: 60px;
     outline: none;
     font-size: 30px;
     color: rgba(30, 130, 76, 1);
