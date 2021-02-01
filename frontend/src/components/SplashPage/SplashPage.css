@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(243, 241, 241);
+    background: rgba(255, 255, 255, .8);
     height: 12%;
     margin-top: 3%;
     margin-left: 33%;
