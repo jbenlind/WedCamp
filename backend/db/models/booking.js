@@ -4,8 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     venueId: DataTypes.INTEGER,
     date: DataTypes.DATE,
-    numberOfGuests: DataTypes.INTEGER,
-    cost: DataTypes.NUMERIC(10, 2)
+    numberOfGuests: DataTypes.INTEGER
   }, {});
   Booking.associate = function(models) {
     Booking.belongsTo(models.User, { foreignKey: 'userId'});

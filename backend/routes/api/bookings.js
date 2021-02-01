@@ -18,8 +18,7 @@ router.post('/:userId',
   asyncHandler(async (req, res, next) => {
     const bookingData = req.body.booking;
     const booking = await Booking.create(bookingData);
-      res.json({ booking });
-
+      res.json(booking);
   }));
 
 module.exports = router;

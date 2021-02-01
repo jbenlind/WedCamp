@@ -8,7 +8,6 @@ module.exports = {
         venueId:1,
         date: new Date(),
         numberOfGuests: 50,
-        cost: 5500,
         createdAt: new Date(),
         updatedAt: new Date()
       }

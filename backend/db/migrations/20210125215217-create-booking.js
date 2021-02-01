@@ -26,10 +26,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      cost: {
-        allowNull: false,
-        type: Sequelize.NUMERIC(10, 2)
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
