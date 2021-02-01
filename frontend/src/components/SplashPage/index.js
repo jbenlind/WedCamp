@@ -25,7 +25,7 @@ function SplashPage() {
           <input
             type="text"
             className="search-field__location"
-            placeholder="Cities in Wisconsin..."
+            placeholder="Location..."
             value={searchInput}
             onChange={(event) => setSearchInput(event.target.value)}
           />
