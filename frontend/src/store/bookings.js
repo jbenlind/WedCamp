@@ -9,7 +9,7 @@ export const setBookings = (bookings) => {
     }
 }
 // other params?
-export const createBooking = (description, dates, userId) => {
+export const createBooking = ({numGuests, bookingDate, userId}) => {
     return async dispatch => {
         const res = await fetch(`/api/bookings/${userId}`, {
             method: "POST",
@@ -17,7 +17,7 @@ export const createBooking = (description, dates, userId) => {
                 "Content-Type": "application/json",
             },
             // other params?
-            body: JSON.stringify({description, dates}),
+            body: JSON.stringify({numGuests, bookingDate, userId}),
         });
 
         dispatch(setBookings(res.data.bookings))

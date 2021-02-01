@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
 import GoogleMap from '../map/index';
 import ReviewFormModal from '../modal'
+// import * as bookingActions from '../../store/bookings';
 import "./fullDetails.css";
 
 const FullDetails = () => {
+  const history = useHistory();
   const [showModal, setShowModal] = useState(false);
+  const [bookingDate, setBookingDate] = useState("");
+  const [numGuests, setNumGuests] = useState(0);
 
   const dispatch = useDispatch();
   const { venueId } = useParams();
@@ -17,11 +22,20 @@ const FullDetails = () => {
     dispatch(venueActions.getVenueInfo());
   }, [dispatch]);
 
+  // const userId = useSelector((state) => state.session.user ? state.session.user.id : null)
   const venues = useSelector((state) => state.venueInfo.venues);
+
 
   let venue;
   if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
   if (!venue) return null;
+
+
+
+  const onSubmit = () => {
+    // dispatch(bookingActions.createBooking({ userId, venueId, bookingDate, numGuests}))
+    history.push('/');
+  }
 
   return (
     <>
@@ -37,7 +51,8 @@ const FullDetails = () => {
           </div>
         </div>
         <div className='bookingForm'>
-          <form className='booking-form'>
+
+          <form className='booking-form' onSubmit={onSubmit}>
           <div className='pricing'>
             <div className="price">{`$${venue.averagePrice}`}</div>
             <div className='price-per'>(for 50 guests)</div>
@@ -45,14 +60,16 @@ const FullDetails = () => {
             <div>
               <input
                 className='date-picker'
+                value={bookingDate}
                 type="date"
+                onChange={(event)=> setBookingDate(event.target.value)}
               />
               <input
                 className="guest-picker"
                 type='number'
                 placeholder="Guests(below cap)"
-              // controlled input for error on over cap
-              // max
+                value={numGuests}
+                onChange={(event) => setNumGuests(event.target.value)}
               />
 
             </div>
@@ -103,7 +120,7 @@ const FullDetails = () => {
                   <tr className="row-1">
                     <td className="revew-userName">{review.User.username}</td>
                     {review.verifiedBooking ?
-                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <p className="verified">Not Verified</p>}
+                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <td className="verified">Not Verified</td>}
                     <td>{`Rating:${review.rating}/10`}</td>
                   </tr>
                   <tr>

@@ -4,6 +4,7 @@
   padding-top: 1vh;
   color: black;
   font-family: Calibre, Helvetica, Arial, sans-serif;
+  color: #222222;
 }
 
 .details-grid {
@@ -94,7 +95,7 @@
 }
 
 .guest-picker {
-  height: 5vh;
+  height: 4.5vh;
   width: 60%;
   padding:5px;
   margin: 1%;
@@ -237,13 +238,9 @@
   box-shadow:1px 1px 10px lightgrey;
   width: 100%;
   height:100%;
+  overflow: hidden;
 }
 
-.the-map {
- margin-left: 4%;
- margin-top: 1%;
- border-radius: 25px;
-}
 
 .reviews-container {
   grid-column-start: 1;
@@ -257,7 +254,7 @@
   font-size: 19px;
   color: black;
   box-shadow:1px 1px 10px lightgrey;
-
+  overflow: auto;
 }
 
 .review-header-container {
@@ -296,7 +293,6 @@
 }
 
 .verified {
-  font-weight: bold;
   font-size: 21px;
 }
 
@@ -305,18 +301,40 @@
   flex-direction: row;
   align-items:center;
   justify-content: space-evenly;
-  font-weight: bold;
   font-size: 21px;
   padding-bottom: 3%;
 }
 
 .row-2 {
   font-size: 21px;
-  font-weight:550;
   padding-bottom: 3%;
 }
 
 #checkmark {
   color: rgba(30, 130, 76, 1);
   font-size: 23px;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: lightgrey;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 130, 76, 1);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid lightgrey;  /* creates padding around scroll thumb */
+}
+
+.reviews-container::-webkit-scrollbar {
+  width: 13px;               /* width of the entire scrollbar */
+}
+.reviews-container::-webkit-scrollbar-track {
+  background: lightgrey;        /* color of the tracking area */
+}
+.reviews-container::-webkit-scrollbar-thumb {
+  background-color: rgba(30, 130, 76, 1);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid lightgrey;  /* creates padding around scroll thumb */
 }

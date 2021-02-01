@@ -20,7 +20,7 @@
     background-color: rgba(255, 255, 255, .8);
     height: 600px;
     width: 500px;
-    color: black;
+    color: #222222;
     border-radius: 25px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
 }
@@ -32,7 +32,7 @@
 .form-header {
     padding-top: 8%;
     padding-bottom: 2%;
-    color: black;
+    color: #222222;
     font-size: 38px;
     font-weight: 700;
     font-family: Calibre, Helvetica, Arial, sans-serif;
@@ -91,7 +91,7 @@
     margin-top: 7%;
     font-size: 18px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-    color: black;
+    color: #222222;
 }
 
 .redirect-login:hover {
