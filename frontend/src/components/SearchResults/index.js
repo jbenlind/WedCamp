@@ -8,7 +8,7 @@ const venues = useSelector((state) => state.venueInfo.venues)
     return(
         <div className="search-body">
             <div className="search-header-container">
-                <h3 className="search-header">Locations found...</h3>
+                <h4 className="search-header">Locations found . . .</h4>
             </div>
             <div className="search-grid-body">
                 {venues &&
