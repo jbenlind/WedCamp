@@ -5,8 +5,6 @@ import * as venueActions from "../../store/venues";
 import { DatePicker } from 'react-nice-dates';
 import {enUS} from 'date-fns/locale';
 import 'react-nice-dates/build/style.css'
-// import { use } from "../../../../backend/routes/api/venues";
-
 import "./SplashPage.css";
 
 function SplashPage() {
@@ -42,7 +40,7 @@ function SplashPage() {
                 />
               </div>
               <p className="date-text">Dates</p>
-              <div className="date-box">
+              <div className="search-date-box">
                 <DatePicker date={date} onDateChange={setDate} locale={enUS}>
                   {({ inputProps, focused }) => (
                   <input
