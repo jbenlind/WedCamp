@@ -10,9 +10,9 @@
 .details-grid {
   display: grid;
   grid-template-columns: 47% 1% 30% 22%;
-  grid-template-rows: .5% 3% 11% 11% 3.5% 18% 1% 21% 1% auto 1.5%;
+  grid-template-rows: .5% 3% 10% 10% 3.5% 14% 1% 18% 1% auto 1.5%;
   width: 50%;
-  height: 200vh;
+  height: 250vh;
   margin-top: 5%;
   margin-left: 25%;
   overflow-y: visible;
