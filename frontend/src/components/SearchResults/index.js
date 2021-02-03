@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import './index.css';
+import './SearchResults.css';
 
 const SearchResults = () => {
 

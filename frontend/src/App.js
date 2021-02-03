@@ -6,11 +6,9 @@ import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation';
 import Explorer from './components/Explore';
 import DemoUser from './components/DemoUser';
-import FullDetails from './components/Explore/FullDetails';
+import VenueInfo from './components/VenueInfo';
 import Footer from './components/footer';
 import SearchResults from './components/SearchResults';
-
-// import upComingBookings from './components/Bookings';
 
 function App() {
   return (
@@ -40,7 +38,7 @@ function App() {
           </Route>
 
           <Route path='/explore/:venueId'>
-            <FullDetails />
+            <VenueInfo />
           </Route>
 
           <Route path="/searchResults">

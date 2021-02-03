@@ -6,7 +6,7 @@ import GoogleMapReact from 'google-map-react';
 const Pin = () => {
     return <i id="pin-icon" className="fad fa-map-pin" style={{fontSize: '35px', color: 'rgba(30, 130, 76, 1)'}}></i>;
 }
-const GoogleMap = ({venue}) => {
+const SingleVenueMap = ({venue}) => {
 
     const defaultProps = {
         center: {
@@ -29,4 +29,4 @@ const GoogleMap = ({venue}) => {
 
 }
 
-export default GoogleMap;
+export default SingleVenueMap;

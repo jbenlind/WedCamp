@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from '../../context/modal';
-import './index.css';
+import './Modal.css';
 
 function ReviewFormModal({setShowModal}) {
 

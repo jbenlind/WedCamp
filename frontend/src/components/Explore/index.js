@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import * as venueActions from '../../store/venues';
-import './explore.css'
+import './Explore.css'
 
 const Explorer = () => {
     const dispatch = useDispatch();

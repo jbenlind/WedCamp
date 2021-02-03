@@ -4,12 +4,11 @@ import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import * as venueActions from "../../store/venues";
 import AmenityIcon from '../AmenityIcon';
-import GoogleMap from '../map/index';
+import SingleVenueMap from '../map/index';
 import ReviewFormModal from '../modal'
-// import * as bookingActions from '../../store/bookings';
-import "./fullDetails.css";
+import "./VenueInfo.css";
 
-const FullDetails = () => {
+const VenueInfo = () => {
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const [bookingDate, setBookingDate] = useState("");
@@ -95,7 +94,7 @@ const FullDetails = () => {
         </div>
         <div className='google-maps-api'>
           <div className="the-map">
-            {venue.latitude && <GoogleMap venue={venue} />}
+            {venue.latitude && <SingleVenueMap venue={venue} />}
           </div>
         </div>
         <div className='amenities-container'>
@@ -140,4 +139,4 @@ const FullDetails = () => {
   );
 };
 
-export default FullDetails;
+export default VenueInfo;
