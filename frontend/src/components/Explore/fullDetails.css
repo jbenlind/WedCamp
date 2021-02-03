@@ -11,7 +11,6 @@
   display: grid;
   grid-template-columns: 47% 1% 30% 22%;
   grid-template-rows: .5% 3% 11% 11% 3.5% 18% 1% 21% 1% auto 1.5%;
-                                                    /* try auto for infinite size */
   width: 50%;
   height: 200vh;
   margin-top: 5%;
@@ -254,7 +253,7 @@
   font-size: 19px;
   color: black;
   box-shadow:1px 1px 10px lightgrey;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .review-header-container {
@@ -326,7 +325,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid lightgrey;  /* creates padding around scroll thumb */
 }
-/* 
+/*
 .reviews-container::-webkit-scrollbar {
   width: 7px;
 }
