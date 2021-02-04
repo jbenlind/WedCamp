@@ -17,7 +17,7 @@
     width: 100%;
     padding-top: 1vh;
     display: grid;
-    grid-template-columns: 15% 10% 50% 10% 15%;
+    grid-template-columns: 15% 10% 50% 7% 18%;
     grid-template-rows: 5% 20% 5% 16% 54%;
 }
 
@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 2%;
-    font-size: 68px;
+    font-size: 4rem;
     font-weight: 700;
     color: white;
 }
@@ -42,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 700;
     color: white;
 
@@ -125,13 +125,17 @@
 }
 
 .nice-dates-popover {
-    /* position: absolute;
-    right: 26%; */
     max-height: 380px;
     overflow: hidden;
 }
 
+.nice-dates-day:before {
+    background-color: rgba(30, 130, 76, 1);
+}
 
+.nice-dates-day:after {
+    border: 2px solid rgba(30, 130, 76, 1);
+}
 
 .search-button-box {
     grid-column-start: 8;
@@ -162,10 +166,42 @@
     border-width: 4px;
 }
 
- .splash ::placeholder {
+.button-container {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.side-bar-container {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+
+}
+
+.translate {
+    
+}
+
+.side-bar {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: cubic-bezier();
+}
+
+.splash ::placeholder {
     color: rgba(0, 0, 0, .8)
 }
 
 input, button {
     outline: none;
   }
+
+#hidden {
+    display: none;
+}

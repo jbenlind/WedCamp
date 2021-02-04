@@ -13,6 +13,12 @@ function SplashPage() {
 
   const [searchInput, setSearchInput] = useState("");
   const [date, setDate] = useState(new Date());
+  const [sideBar, setSideBar] = useState("hidden");
+  const [firstButton, setFirstButton] = useState("");
+
+  const modifiers = {
+    disabled: date => date < Date.now()
+  }
 
 
   const searchStarted = async () => {
@@ -20,9 +26,33 @@ function SplashPage() {
     if (searchInput !== "") history.push("/searchResults");
   };
 
+  const sideBarPosition = () => {
+    if(firstButton === "") setFirstButton("hidden")
+    if(firstButton === "hidden") setFirstButton("")
+    if(sideBar === "hidden") setSideBar("");
+    if(sideBar !==  "hidden") setSideBar("hidden");
+  }
+console.log("-------------", sideBar)
   return (
       <div className="splash">
         <div className="splash-grid">
+          <div className="button-container">
+            <button
+              id={firstButton}
+              className={"show-bookings-button"}
+              onClick={(event) => sideBarPosition()}
+              ><i class="fal fa-book"></i>
+            </button>
+          </div>
+          <div className="side-bar-container">
+            <div id={sideBar} className="side-bar">
+              <button
+                className="hide-bookings-button"
+                onClick={(event) => sideBarPosition()}
+                ><i class="fal fa-book"></i>
+              </button>
+            </div>
+          </div>
           <div className="splash-headers">
             <h1 className="header-1">Find yourselves outdoors</h1>
             <h3 className="header-2">Come see what's waiting for you . . .</h3>
@@ -41,7 +71,7 @@ function SplashPage() {
               </div>
               <p className="date-text">Dates</p>
               <div className="search-date-box">
-                <DatePicker date={date} onDateChange={setDate} locale={enUS}>
+                <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                   {({ inputProps, focused }) => (
                   <input
                     className={'date-input' + (focused ? ' -focused' : '')}
