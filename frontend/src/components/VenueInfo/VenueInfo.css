@@ -80,7 +80,7 @@
   font-size: 26px;
 }
 
-.date-picker {
+.date-input-info {
   height: 5vh;
   width: 60%;
   padding:5px;
@@ -92,6 +92,11 @@
   border-color: rgba(0, 0, 0, .7) ;
   cursor: pointer;
 }
+
+/* .nice-dates-popover {
+  max-height: 200px;
+  overflow: hidden;
+} */
 
 .guest-picker {
   height: 4.5vh;

@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import * as venueActions from "../../store/venues";
+import * as bookingActions from "../../store/bookings"
 import AmenityIcon from '../AmenityIcon';
 import SingleVenueMap from '../map/index';
 import ReviewFormModal from '../modal'
+import { DatePicker } from 'react-nice-dates';
+import {enUS} from 'date-fns/locale';
+import 'react-nice-dates/build/style.css'
 import "./VenueInfo.css";
 
 const VenueInfo = () => {
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
-  const [bookingDate, setBookingDate] = useState("");
-  // const [numGuests, setNumGuests] = useState(0);
+  const [date, setDate] = useState(new Date());
+  const [numGuests, setNumGuests] = useState(0);
+  const [userId, setUserId] = useState(null)
+
+  const modifiers = {
+    disabled: date => date < Date.now()
+  }
 
   const dispatch = useDispatch();
   const { venueId } = useParams();
@@ -21,19 +29,21 @@ const VenueInfo = () => {
     dispatch(venueActions.getVenueInfo());
   }, [dispatch]);
 
-  // const userId = useSelector((state) => state.session.user ? state.session.user.id : null)
+  const loggedInUser = useSelector((state) => state.session.user ? state.session.user.id : null)
   const venues = useSelector((state) => state.venueInfo.venues);
 
+  useEffect(() => {
+    if(loggedInUser) setUserId(loggedInUser)
+  }, [loggedInUser, userId])
 
   let venue;
   if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
   if (!venue) return null;
 
-
-
-  const onSubmit = () => {
-    // dispatch(bookingActions.createBooking({ userId, venueId, bookingDate, numGuests}))
-    history.push('/');
+  const onSubmit = async () => {
+    console.log(userId)
+    await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
+    history.push('/')
   }
 
   return (
@@ -57,20 +67,21 @@ const VenueInfo = () => {
             <div className='price-per'>(for 50 guests)</div>
           </div>
             <div>
-              <input
-                className='date-picker'
-                value={bookingDate}
-                type="date"
-                onChange={(event)=> setBookingDate(event.target.value)}
-              />
+              <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
+                {({ inputProps, focused }) => (
+                <input
+                  className={'date-input-info' + (focused ? ' -focused' : '')}
+                  {...inputProps}
+                />
+                )}
+              </DatePicker>
               <input
                 className="guest-picker"
                 type='number'
                 placeholder="Guests(below cap)"
-                // value={numGuests}
-                // onChange={(event) => setNumGuests(event.target.value)}
+                value={numGuests}
+                onChange={(event) => setNumGuests(event.target.value)}
               />
-
             </div>
             <button className='book-button' type="submit">Request Venue</button>
           </form>
