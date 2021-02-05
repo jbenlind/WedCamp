@@ -7,18 +7,28 @@ const router = express.Router();
 router.get(
   "/:userId",
   asyncHandler(async (req, res) => {
-    const booking = await Booking.findAll({where: {
-      userId: req.params.userId
-    }});
+    const booking = await Booking.findAll({
+      where: {
+        userId: req.params.userId,
+      },
+    });
     res.json(booking);
   })
 );
 
-router.post('/:userId',
+router.post(
+  "/:userId",
   asyncHandler(async (req, res, next) => {
-    const bookingData = req.body.booking;
-    const booking = await Booking.create(bookingData);
-      res.json(booking);
-  }));
+    const userId = await parseInt(req.params.userId, 10);
+    const { venueId, date, numGuests } = req.body;
+    const booking = await Booking.create({
+      userId,
+      venueId: Number(venueId),
+      date,
+      numberOfGuests: numGuests,
+    });
+    res.json(booking);
+  })
+);
 
 module.exports = router;
