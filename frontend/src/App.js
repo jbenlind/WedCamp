@@ -10,7 +10,9 @@ import DemoUser from './components/DemoUser';
 import VenueInfo from './components/VenueInfo';
 import Footer from './components/footer';
 import SearchResults from './components/SearchResults';
-import * as sessionActions from './store/session'
+import UpComingBookings from './components/Bookings';
+import * as sessionActions from './store/session';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -53,6 +55,10 @@ function App() {
 
             <Route path="/searchResults">
               <SearchResults />
+            </Route>
+
+            <Route path="/bookings">
+              <UpComingBookings />
             </Route>
 
           </Switch>

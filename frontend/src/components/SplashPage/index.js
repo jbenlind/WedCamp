@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {useDispatch } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import * as venueActions from "../../store/venues";
 import { DatePicker } from 'react-nice-dates';
@@ -10,6 +10,7 @@ import "./SplashPage.css";
 function SplashPage() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const sessionUser = useSelector(state => state.session.user);
 
   const [searchInput, setSearchInput] = useState("");
   const [date, setDate] = useState(new Date());
@@ -32,24 +33,24 @@ function SplashPage() {
     if(sideBar === "hidden") setSideBar("");
     if(sideBar !==  "hidden") setSideBar("hidden");
   }
-console.log("-------------", sideBar)
+
   return (
       <div className="splash">
         <div className="splash-grid">
+          { sessionUser &&
           <div className="button-container">
             <button
               id={firstButton}
               className={"show-bookings-button"}
               onClick={(event) => sideBarPosition()}
-              ><i class="fal fa-book"></i>
-            </button>
-          </div>
+              >Upcoming Events</button>
+          </div>}
           <div className="side-bar-container">
             <div id={sideBar} className="side-bar">
               <button
                 className="hide-bookings-button"
                 onClick={(event) => sideBarPosition()}
-                ><i class="fal fa-book"></i>
+                ><i class="far fa-arrow-right"></i>
               </button>
             </div>
           </div>

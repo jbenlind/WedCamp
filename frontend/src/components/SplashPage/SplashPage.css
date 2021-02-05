@@ -70,6 +70,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
     padding-top: 5%;
+    font-size: 18px;
 }
 
 .location-box {
@@ -98,6 +99,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
     padding-top: 6%;
+    font-size: 18px;
 }
 
 .search-date-box {
@@ -173,6 +175,18 @@
     grid-row-end: 1;
     display: flex;
     justify-content: flex-end;
+
+}
+
+.show-bookings-button {
+    height: 4vh;
+    width: 9vw;
+    font-size: 18px;
+    background-color: rgba(30, 130, 76, 1);
+    color: white;
+    text-align: center;
+    font-family: Calibre, Helvetica, Arial, sans-serif;
+    z-index: 2;
 }
 
 .side-bar-container {
@@ -180,18 +194,30 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 6;
-
+    transition: width 2s;
 }
-
-/* .translate {
-
-} */
 
 .side-bar {
     height: 100%;
     width: 100%;
     background-color: white;
-    transition: cubic-bezier();
+}
+
+.hide-bookings-button {
+    background-color: white;
+    border: none;
+}
+
+.fa-arrow-right{
+    color: rgba(30, 130, 76, 1);
+    font-size: 35px;
+    background-color: white;
+}
+
+.fa-arrow-right:hover {
+    cursor: pointer;
+    transform: translateX(5px);
+    transition: all 0.25s ease 0s;
 }
 
 .splash ::placeholder {

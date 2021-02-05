@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import './SearchResults.css';
 
 const SearchResults = () => {
-
 const venues = useSelector((state) => state.venueInfo.venues)
     return(
         <div className="search-body">

@@ -2,7 +2,8 @@ import React from "react";
 import GoogleMapReact from 'google-map-react';
 
 
-// key AIzaSyAoO7BkNknLbtgbKd7O-UufuNTtufJ6FTo
+
+// AIzaSyAoO7BkNknLbtgbKd7O-UufuNTtufJ6FTo
 const Pin = () => {
     return <i id="pin-icon" className="fad fa-map-pin" style={{fontSize: '35px', color: 'rgba(30, 130, 76, 1)'}}></i>;
 }
