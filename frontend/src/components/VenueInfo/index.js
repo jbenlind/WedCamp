@@ -40,10 +40,10 @@ const VenueInfo = () => {
   if (venues) venue = venues.find((venue) => venue.id === Number(venueId));
   if (!venue) return null;
 
-  const onSubmit = async () => {
-    console.log(userId)
+  const onSubmit = async (event) => {
+    event.preventDefault()
     await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
-    history.push('/')
+    history.push('/', {bookedVenue: true})
   }
 
   return (
@@ -66,7 +66,7 @@ const VenueInfo = () => {
             <div className="price">{`$${venue.averagePrice}`}</div>
             <div className='price-per'>(for 50 guests)</div>
           </div>
-            <div>
+            <div className="date-selector-venueInfo">
               <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                 {({ inputProps, focused }) => (
                 <input

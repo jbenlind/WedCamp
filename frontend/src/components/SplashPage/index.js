@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import {useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import * as venueActions from "../../store/venues";
+import UpComingBookings from '../Bookings';
 import { DatePicker } from 'react-nice-dates';
 import {enUS} from 'date-fns/locale';
 import 'react-nice-dates/build/style.css'
@@ -12,10 +13,17 @@ function SplashPage() {
   const history = useHistory();
   const sessionUser = useSelector(state => state.session.user);
 
+  let initialSideBar = "hidden";
+  let initialButton = "";
+  if(history.location.state && history.location.state.bookedVenue) {
+    initialSideBar = "";
+    initialButton ="hidden"
+  }
+
   const [searchInput, setSearchInput] = useState("");
   const [date, setDate] = useState(new Date());
-  const [sideBar, setSideBar] = useState("hidden");
-  const [firstButton, setFirstButton] = useState("");
+  const [sideBar, setSideBar] = useState(initialSideBar);
+  const [firstButton, setFirstButton] = useState(initialButton);
 
   const modifiers = {
     disabled: date => date < Date.now()
@@ -47,11 +55,15 @@ function SplashPage() {
           </div>}
           <div className="side-bar-container">
             <div id={sideBar} className="side-bar">
-              <button
-                className="hide-bookings-button"
-                onClick={(event) => sideBarPosition()}
-                ><i class="far fa-arrow-right"></i>
-              </button>
+              <div className="side-bar-grid">
+                <button
+                  className="hide-bookings-button"
+                  onClick={(event) => sideBarPosition()}
+                  ><i class="far fa-arrow-right"></i>
+                </button>
+                <h3 className="side-bar-header">Your bookings</h3>
+                <UpComingBookings />
+              </div>
             </div>
           </div>
           <div className="splash-headers">

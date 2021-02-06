@@ -1,6 +1,6 @@
 import { fetch } from "./csrf";
 
-const SET_BOOKINGS = 'bookings/GET_BOOKINGS';
+const SET_BOOKINGS = 'bookings/SET_BOOKINGS';
 
 export const setBookings = (bookings) => {
     return {
@@ -8,7 +8,7 @@ export const setBookings = (bookings) => {
         bookings: bookings
     }
 }
-// other params?
+
 export const createBooking = ({userId, venueId, date, numGuests}) => {
     return async dispatch => {
         const res = await fetch(`/api/bookings/${userId}`, {
@@ -16,11 +16,10 @@ export const createBooking = ({userId, venueId, date, numGuests}) => {
             headers : {
                 "Content-Type": "application/json",
             },
-            // other params?
+
             body: JSON.stringify({venueId, date, numGuests}),
         });
-
-        await dispatch(setBookings(res.data.bookings))
+        await dispatch(setBookings(res.data))
 
         return res;
     }

@@ -220,6 +220,12 @@
     transition: all 0.25s ease 0s;
 }
 
+.side-bar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .splash ::placeholder {
     color: rgba(0, 0, 0, .8)
 }
