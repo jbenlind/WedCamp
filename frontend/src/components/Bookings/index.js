@@ -23,10 +23,16 @@ function UpComingBookings() {
     return(
         <div>
             <div className="booking-content">
-                    {bookings &&
+                    {/* {bookings &&
                     bookings.map((booking) => (
                         <Link className ='booking-location' key={booking.id} to={`/explore/${booking.venueId}`}>Link</Link>
-                    ))}
+                    ))} */}
+                    {/* { bookings &&
+                    venues.filter( venue => bookings.values.includes(venue.id) ).map( bookedVenue => (
+                    <h3> { bookedVenue.name } </h3>
+                    <p>Date: {bookings.find(booking => booking.venueId === bookedVenue.id).dates}</p>
+                    <p>Guests: {bookings.find(booking => booking.venueId === bookedVenue.id).numberOfGuests}</p>
+                    ) */}
             </div>
         </div>
     )
