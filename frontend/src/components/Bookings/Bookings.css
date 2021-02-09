@@ -1,5 +1,14 @@
+.bookingInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .booking-venue {
     text-decoration: none;
+    color: rgba(30, 130, 76, 1);
+    font-size: 20px;
 }
 
 .booking-venue:hover {

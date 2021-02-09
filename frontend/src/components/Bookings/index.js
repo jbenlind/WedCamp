@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import * as bookingActions from '../../store/bookings';
 import * as venueActions from '../../store/venues';
+import "./Bookings.css";
 
 function UpComingBookings() {
     const dispatch = useDispatch();
