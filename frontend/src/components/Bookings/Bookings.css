@@ -1,0 +1,7 @@
+.booking-venue {
+    text-decoration: none;
+}
+
+.booking-venue:hover {
+    text-decoration: underline;
+}

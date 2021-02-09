@@ -184,7 +184,7 @@
     font-size: 18px;
     background-color: rgba(30, 130, 76, 1);
     color: white;
-    lstext-align: center;
+    text-align: center;
     font-family: Calibre, Helvetica, Arial, sans-serif;
     z-index: 2;
 }

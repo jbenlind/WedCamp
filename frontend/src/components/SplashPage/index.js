@@ -59,7 +59,7 @@ function SplashPage() {
                 <button
                   className="hide-bookings-button"
                   onClick={(event) => sideBarPosition()}
-                  ><i class="far fa-arrow-right"></i>
+                  ><i className="far fa-arrow-right"></i>
                 </button>
                 <h3 className="side-bar-header">Your bookings</h3>
                 <UpComingBookings />
