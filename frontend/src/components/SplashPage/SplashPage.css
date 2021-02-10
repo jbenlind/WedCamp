@@ -203,7 +203,19 @@
     background-color: white;
 }
 
+.side-bar-grid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 4% 3% auto;
+}
+
 .hide-bookings-button {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    justify-content: flex-start;
     background-color: white;
     border: none;
 }
@@ -224,6 +236,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.booking-display {
+    grid-row-start: 4;
+    grid-row-end: 4;
 }
 
 .splash ::placeholder {

@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5%;
 }
 
 .booking-venue {
@@ -13,4 +14,9 @@
 
 .booking-venue:hover {
     text-decoration: underline;
+}
+
+.booking-date,
+.booking-guests {
+    font-size: 18px;
 }

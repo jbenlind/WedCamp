@@ -21,12 +21,10 @@ function UpComingBookings() {
 
     const bookings = useSelector((state) => Object.values(state.booking));
     const venues = useSelector((state) => state.venueInfo.venues);
-
-
+    
     useEffect(() => {
         if(bookings && venues) {
             setLoaded(true);
-
         }
     }, [bookings, venues])
 

@@ -57,10 +57,6 @@ function App() {
               <SearchResults />
             </Route>
 
-            <Route path="/bookings">
-              <UpComingBookings />
-            </Route>
-
           </Switch>
         <Footer />
         </div>

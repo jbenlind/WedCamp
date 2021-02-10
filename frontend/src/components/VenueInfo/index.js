@@ -16,7 +16,7 @@ const VenueInfo = () => {
   const [showModal, setShowModal] = useState(false);
   const [date, setDate] = useState(new Date());
   const [numGuests, setNumGuests] = useState(0);
-  const [userId, setUserId] = useState(null)
+  const [userId, setUserId] = useState(null);
 
   const modifiers = {
     disabled: date => date < Date.now()
@@ -31,6 +31,7 @@ const VenueInfo = () => {
 
   const loggedInUser = useSelector((state) => state.session.user ? state.session.user.id : null)
   const venues = useSelector((state) => state.venueInfo.venues);
+  // const bookings = useSelector((state) => Object.values(state.booking));
 
   useEffect(() => {
     if(loggedInUser) setUserId(loggedInUser)

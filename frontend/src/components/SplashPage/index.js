@@ -29,7 +29,6 @@ function SplashPage() {
     disabled: date => date < Date.now()
   }
 
-
   const searchStarted = async () => {
     await dispatch(venueActions.searchVenues(searchInput));
     if (searchInput !== "") history.push("/searchResults");
@@ -53,6 +52,7 @@ function SplashPage() {
               onClick={(event) => sideBarPosition()}
               >Upcoming Events</button>
           </div>}
+          { sessionUser &&
           <div className="side-bar-container">
             <div id={sideBar} className="side-bar">
               <div className="side-bar-grid">
@@ -61,11 +61,13 @@ function SplashPage() {
                   onClick={(event) => sideBarPosition()}
                   ><i className="far fa-arrow-right"></i>
                 </button>
-                <h3 className="side-bar-header">Your bookings</h3>
+                <h1 className="side-bar-header">Your bookings</h1>
+                <div className="booking-display">
                 <UpComingBookings />
+                </div>
               </div>
             </div>
-          </div>
+          </div>}
           <div className="splash-headers">
             <h1 className="header-1">Find yourselves outdoors</h1>
             <h3 className="header-2">Come see what's waiting for you . . .</h3>
