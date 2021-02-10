@@ -61,12 +61,11 @@ const VenueInfo = () => {
           </div>
         </div>
         <div className='bookingForm'>
-
           <form className='booking-form' onSubmit={onSubmit}>
-          <div className='pricing'>
-            <div className="price">{`$${venue.averagePrice}`}</div>
-            <div className='price-per'>(for 50 guests)</div>
-          </div>
+            <div className="average-price">
+              <h3 className="price">{`$${venue.averagePrice}`}</h3>
+              <h3 className='price-per'>(for 50 guests)</h3>
+            </div>
             <div className="date-selector-venueInfo">
               <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                 {({ inputProps, focused }) => (
@@ -76,6 +75,8 @@ const VenueInfo = () => {
                 />
                 )}
               </DatePicker>
+            </div>
+            <div className="guests-selector">
               <input
                 className="guest-picker"
                 type='selector'
