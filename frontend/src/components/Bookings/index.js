@@ -21,7 +21,7 @@ function UpComingBookings() {
 
     const bookings = useSelector((state) => Object.values(state.booking));
     const venues = useSelector((state) => state.venueInfo.venues);
-    
+
     useEffect(() => {
         if(bookings && venues) {
             setLoaded(true);
@@ -32,10 +32,10 @@ function UpComingBookings() {
     return(
         <div>
             <div className="booking-content">
-                    {loaded &&
+                    {loaded && bookings.length > 0 &&
                     bookings.map((booking) => (
                         <div className="bookingInfo" key={booking.id}>
-                            <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId).name}</Link>
+                            <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId) ? venues.find(venue => venue.id === booking.venueId).name : ""}</Link>
                             <p className="booking-date">Date:{booking.date.slice(0, 10)}</p>
                             <p className="booking-guests">Guests:{booking.numberOfGuests}</p>
                         </div>

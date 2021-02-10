@@ -31,7 +31,7 @@ const VenueInfo = () => {
 
   const loggedInUser = useSelector((state) => state.session.user ? state.session.user.id : null)
   const venues = useSelector((state) => state.venueInfo.venues);
-  // const bookings = useSelector((state) => Object.values(state.booking));
+
 
   useEffect(() => {
     if(loggedInUser) setUserId(loggedInUser)
@@ -125,23 +125,14 @@ const VenueInfo = () => {
           </div>
           {venue.Reviews &&
           venue.Reviews.map((review) => (
-            <div className="review" key={review.id}>
-              <table className="review-table">
-                <tbody>
-                  <tr className="row-1">
-                    <td className="revew-userName">{review.User.username}</td>
-                    {review.verifiedBooking ?
-                    <td>Verified booking<i id="checkmark" className="fas fa-check-square"></i></td> : <td className="verified">Not Verified</td>}
-                    <td>{`Rating:${review.rating}/10`}</td>
-                  </tr>
-                  <tr>
-                    <td className="row-2">Title: {review.title}</td>
-                  </tr>
-                  <tr>
-                    <td colSpan='3'>{review.body}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="review-card" key={review.id}>
+                <div className="review-card-info">
+                  <i id="profile-icon" className="fal fa-user-circle"></i>
+                  <p className="review-info-userName">{review.User.username}</p>
+                  <p className="review-info-rating">{`${review.rating}/10`}</p>
+                  <p className="review-info-title">{review.title}</p>
+                  <p className="review-info-body">{review.body}</p>
+              </div>
             </div>
           ))}
         </div>

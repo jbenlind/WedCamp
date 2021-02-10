@@ -6,9 +6,9 @@ const SearchResults = () => {
 const venues = useSelector((state) => state.venueInfo.venues)
     return(
         <div className="search-body">
-            <div className="search-body-grid">
+            <div className="search-flex">
                 <div className="card-holder-container">
-                    <div className="card-holder-grid">
+                    <div className="card-holder-flex">
                         {venues &&
                         venues.map((venue) => (
                             <Link className ='card-link' key={venue.id} to={`/explore/${venue.id}`}>
@@ -21,9 +21,7 @@ const venues = useSelector((state) => state.venueInfo.venues)
                         ))}
                     </div>
                 </div>
-                <div className="future-map">
-
-                </div>
+                <div className="future-map"></div>
             </div>
         </div>
     )
