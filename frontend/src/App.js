@@ -10,7 +10,6 @@ import DemoUser from './components/DemoUser';
 import VenueInfo from './components/VenueInfo';
 import Footer from './components/footer';
 import SearchResults from './components/SearchResults';
-import UpComingBookings from './components/Bookings';
 import * as sessionActions from './store/session';
 
 

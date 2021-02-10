@@ -78,7 +78,7 @@ const VenueInfo = () => {
               </DatePicker>
               <input
                 className="guest-picker"
-                type='number'
+                type='selector'
                 placeholder="Guests(below cap)"
                 value={numGuests}
                 onChange={(event) => setNumGuests(event.target.value)}
