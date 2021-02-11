@@ -31,9 +31,11 @@ const SearchMap = () => {
             <Marker key={venue.id} onClick={() => setSelected(venue)} position={{lat: Number(venue.latitude), lng: Number(venue.longitude)}}/>
           ))}
           {selected &&
-          <InfoWindow onCloseClick={() => setSelected(null)} position={{lat: Number(selected.latitude), lng: Number(selected.longitude)}}>
+          <InfoWindow  position={{lat: Number(selected.latitude), lng: Number(selected.longitude)}}>
            <div>
-              <Link className="marker-link">{selected.name}</Link>
+              <Link className="marker-link" to={`/explore/${selected.id}`}>{selected.name}</Link>
+              <p className="marker-info">{`Avg Price: $${selected.averagePrice}`}</p>
+              <p className="marker-info">{`Capacity: ${selected.maxNumberGuests}`}</p>
            </div>
             </InfoWindow>}
           <></>

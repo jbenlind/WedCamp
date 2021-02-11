@@ -1,0 +1,14 @@
+.marker-link {
+    text-decoration: none;
+    color: rgba(30, 130, 76, 1);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.marker-link:hover {
+    text-decoration: underline;
+}
+
+.marker-info {
+    font-size: 15px;
+}
