@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
+import SearchMap from '../searchMap'
 import './SearchResults.css';
 
 const SearchResults = () => {
@@ -21,7 +22,9 @@ const venues = useSelector((state) => state.venueInfo.venues)
                         ))}
                     </div>
                 </div>
-                <div className="future-map"></div>
+                <div>
+                    <SearchMap />
+                </div>
             </div>
         </div>
     )

@@ -12,6 +12,7 @@ return (
         <div>
             <a id="footer-content" href="https://www.hipcamp.com/">Hipcamp</a>
         </div>
+        {/* <img src="../images/hipcamp.png" alt="hidden"></img> */}
     </div>
 )
 }

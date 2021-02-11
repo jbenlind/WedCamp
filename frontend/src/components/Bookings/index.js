@@ -33,13 +33,17 @@ function UpComingBookings() {
         <div>
             <div className="booking-content">
                     {loaded && bookings.length > 0 &&
-                    bookings.map((booking) => (
+                    bookings.map((booking) => {
+                        const unixDate = Date.parse(booking.date);
+                        const date = new Date(unixDate);
+                        const options = { year: 'numeric', month: 'long', day: 'numeric'}
+                    return (
                         <div className="bookingInfo" key={booking.id}>
                             <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId) ? venues.find(venue => venue.id === booking.venueId).name : ""}</Link>
-                            <p className="booking-date">Date:{booking.date.slice(0, 10)}</p>
-                            <p className="booking-guests">Guests:{booking.numberOfGuests}</p>
+                            <p className="booking-date">{date.toLocaleString("en-US", options )}</p>
+                            <p className="booking-guests">{`Guests: ${booking.numberOfGuests}`}</p>
                         </div>
-                    ))}
+                    )})}
             </div>
         </div>
     )
