@@ -107,7 +107,7 @@ const VenueInfo = () => {
         </div>
         <div className='google-maps-api'>
           <div className="the-map">
-            {venue.latitude && <SingleVenueMap venue={venue} />}
+            {/* {venue.latitude && <SingleVenueMap venue={venue} />} */}
           </div>
         </div>
         <div className='amenities-container'>

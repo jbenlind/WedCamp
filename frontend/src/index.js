@@ -7,6 +7,7 @@ import App from './App';
 import configureStore from './store';
 import { restoreCSRF } from './store/csrf';
 import { ModalProvider } from './context/modal';
+import {LoadScript } from '@react-google-maps/api';
 
 
 const store = configureStore();
@@ -21,7 +22,9 @@ function Root() {
     <ReduxProvider store={store}>
       <ModalProvider>
         <BrowserRouter>
-          <App />
+          <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
+            <App />
+          </LoadScript>
         </BrowserRouter>
       </ModalProvider>
     </ReduxProvider>
