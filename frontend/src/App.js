@@ -12,7 +12,6 @@ import Footer from './components/footer';
 import SearchResults from './components/SearchResults';
 import * as sessionActions from './store/session';
 
-
 function App() {
   const dispatch = useDispatch();
   const [userLoaded, setUserLoaded] = useState(false);
@@ -20,44 +19,47 @@ function App() {
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setUserLoaded(true));
   }, [dispatch]);
+
   return (
     <>
         {userLoaded &&
         (<div>
-        <Navigation />
 
-          <Switch>
+          <Navigation />
 
-            <Route path='/' exact>
-              <SplashPage />
-            </Route>
+            <Switch>
 
-            <Route path='/login'>
-              <LoginFormPage />
-            </Route>
+              <Route path='/' exact>
+                <SplashPage />
+              </Route>
 
-            <Route path='/signup'>
-              <SignupFormPage />
-            </Route>
+              <Route path='/login'>
+                <LoginFormPage />
+              </Route>
 
-            <Route path='/explore' exact>
-              <Explorer />
-            </Route>
+              <Route path='/signup'>
+                <SignupFormPage />
+              </Route>
 
-            <Route path='/demo'>
-              <DemoUser />
-            </Route>
+              <Route path='/explore' exact>
+                <Explorer />
+              </Route>
 
-            <Route path='/explore/:venueId'>
-              <VenueInfo />
-            </Route>
+              <Route path='/demo'>
+                <DemoUser />
+              </Route>
 
-            <Route path="/searchResults">
-              <SearchResults />
-            </Route>
+              <Route path='/explore/:venueId'>
+                <VenueInfo />
+              </Route>
 
-          </Switch>
-        <Footer />
+              <Route path="/searchResults">
+                <SearchResults />
+              </Route>
+
+            </Switch>
+          <Footer />
+
         </div>
         )}
     </>
