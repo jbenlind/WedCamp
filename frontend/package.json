@@ -9,7 +9,6 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "date-fns": "^2.16.1",
-    "dotenv": "^8.2.0",
     "google-map-react": "^2.1.9",
     "js-cookie": "^2.2.1",
     "react": "^17.0.1",
