@@ -8,7 +8,5 @@
         "sequelize-cli": "npm run --prefix backend sequelize-cli",
         "start": "npm start --prefix backend"
     },
-    "dependencies": {
-        "@react-google-maps/api": "^2.1.1"
-    }
+    "dependencies": {}
 }
