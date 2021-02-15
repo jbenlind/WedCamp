@@ -6,10 +6,15 @@
     margin-bottom: 5%;
 }
 
+.bookingInfo-card {
+    width: 80%;
+    padding-left: 10%;
+}
+
 .booking-venue {
     text-decoration: none;
     color: rgba(30, 130, 76, 1);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .booking-venue:hover {

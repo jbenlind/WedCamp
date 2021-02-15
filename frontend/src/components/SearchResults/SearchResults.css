@@ -19,19 +19,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: 100%;
     overflow: auto;
 }
 
-.future-map {
-    background-color: black;
-    height: 100%;
-    width: 60%;
-    padding: 0px;
-    margin: 0px;
+.card-holder-flex {
+  width: 100%;
+  height: 100%;
+  margin-left: 12%;
 }
-
 
 .card-holder-container::-webkit-scrollbar {
   display: none;
@@ -40,4 +37,31 @@
 .card-holder-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.card-link-search {
+  text-decoration: none;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 45%;
+  width: 85%;
+  margin: 1%;
+  border-radius: 25px;
+  font-family: Calibre, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.search-header {
+  font-size: 30px;
+  margin-left: 20%;
+  margin-top: 2%;
+  font-weight: bold;
 }

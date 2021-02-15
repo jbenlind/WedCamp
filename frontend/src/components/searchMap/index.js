@@ -5,7 +5,7 @@ import { GoogleMap, Marker, InfoWindow} from '@react-google-maps/api';
 import './searchMap.css'
 
 const containerStyle = {
-  width: '1200px',
+  width: '1100px',
   height: '832px'
 };
 

@@ -39,9 +39,11 @@ function UpComingBookings() {
                         const options = { year: 'numeric', month: 'long', day: 'numeric'}
                     return (
                         <div className="bookingInfo" key={booking.id}>
-                            <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId) ? venues.find(venue => venue.id === booking.venueId).name : ""}</Link>
-                            <p className="booking-date">{date.toLocaleString("en-US", options )}</p>
-                            <p className="booking-guests">{`Guests: ${booking.numberOfGuests}`}</p>
+                            <div className="bookingInfo-card">
+                                <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId) ? venues.find(venue => venue.id === booking.venueId).name : ""}</Link>
+                                <p className="booking-date">{date.toLocaleString("en-US", options )}</p>
+                                <p className="booking-guests">{`Guests: ${booking.numberOfGuests}`}</p>
+                            </div>
                         </div>
                     )})}
             </div>

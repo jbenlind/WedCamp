@@ -10,9 +10,9 @@ return (
             <a id="footer-content" href="https://www.linkedin.com/in/jesse-lindloff-0ba8591aa/"><i id="footer-icon" className="fab fa-linkedin"></i>LinkedIn</a>
         </div>
         <div>
-            <a id="footer-content" href="https://www.hipcamp.com/">Hipcamp</a>
+            <a id="footer-content" href="https://www.hipcamp.com/"><img className="hip-camp-icon" src="hipcamp.png" alt=""></img>Hipcamp</a>
         </div>
-        {/* <img src="../images/hipcamp.png" alt="hidden"></img> */}
+
     </div>
 )
 }
