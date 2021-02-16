@@ -9,9 +9,9 @@
     width: 86vw;
     justify-items: center;
     justify-content: center;
-    padding-top: 7%;
+    padding-top: 6%;
     margin-left: 6.5vw;
-    padding-bottom: 3.4%;
+    padding-bottom: 6%;
 
 }
 
@@ -31,12 +31,12 @@
     background-size: cover;
     padding-top: 5vh;
     margin-bottom: 3vh;
-
+    box-shadow: 3px 4px 4px rgb(46, 46, 46);
 }
 
 .venue-card:hover {
     transform: translateY(-8px);
-    box-shadow: 3px 3px 3px rgb(97, 96, 96);
+    box-shadow: 5px 5px 4px (46, 46, 46);
     transition: all 0.25s ease 0s;
     cursor: pointer;
 }

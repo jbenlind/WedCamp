@@ -56,7 +56,7 @@
 }
 
 .search-box-grid {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .9);
     height: 100%;
     border-radius: 80px;
     display: grid;
@@ -185,7 +185,6 @@
     background-color: rgba(30, 130, 76, 1);
     color: white;
     text-align: center;
-    font-family: Calibre, Helvetica, Arial, sans-serif;
     z-index: 2;
 }
 
