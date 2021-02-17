@@ -67,38 +67,17 @@
   border: 1px solid lightgrey ;
 }
 
-.booking-form {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 7% 43% 43% 7%;
-  grid-template-rows: 10% 12% 8% 20% 10% 21% 10%;
-}
-
 .average-price {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:center;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2;
+  justify-content:flex-start;
+
 }
 
 .date-selector-venueInfo {
   height: 100%;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 4;
-  grid-row-end: 4;
-}
 
-.guests-selector {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 4;
 }
 
 .date-input-info {
