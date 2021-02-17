@@ -47,6 +47,8 @@ const VenueInfo = () => {
     history.push('/', {bookedVenue: true})
   }
 
+
+
   return (
     <>
     {showModal && <ReviewFormModal setShowModal={setShowModal} />}
@@ -76,9 +78,10 @@ const VenueInfo = () => {
             </div>
             <div className="guests-selector">
               <input
+                type="select"
+                options={venue.maxNumberGuests - 100, venue.maxNumberGuests - 50, venue.maxNumberGuests}
                 className="guest-picker"
-                type='selector'
-                placeholder="Guests(below cap)"
+                placeholder="Guests"
                 value={numGuests}
                 onChange={(event) => setNumGuests(event.target.value)}
               />

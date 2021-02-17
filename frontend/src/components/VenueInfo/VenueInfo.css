@@ -72,7 +72,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 25px;
+  font-size: 28px;
   color: rgba(30, 130, 76, 1);
   padding-top: 5%;
 }
@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .date-selector-venueInfo {
@@ -98,7 +98,7 @@
   outline: none;
   text-align: center;
   font-size: 20px;
-  border-color: rgba(0, 0, 0, .7) ;
+  border-color: black;
   cursor: pointer;
 }
 
@@ -118,7 +118,7 @@
   outline: none;
   text-align: center;
   font-size: 20px;
-  border-color: rgba(0, 0, 0, .7) ;
+  border-color: black;
   cursor: pointer;
 }
 
@@ -132,6 +132,7 @@
     width: 13.5rem;
     font-size: 26px;
     border-radius: 10px;
+    margin-top: 8%;
     background-color: rgba(30, 130, 76, 1);
     color: white;
     text-align: center;
