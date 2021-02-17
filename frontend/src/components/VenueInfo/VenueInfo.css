@@ -65,36 +65,32 @@
   box-shadow:2px 2px 10px black;
   background-color: white;
   border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .price {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   font-size: 28px;
   color: rgba(30, 130, 76, 1);
   padding-top: 5%;
 }
 
 .price-per {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   font-size: 17px;
 }
 
 .date-selector-venueInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 8%;
+  padding-top: 7%;
 
 }
 
 .date-input-info {
-  width: 12rem;
-  height: 2rem;
+  width: 80%;
+  height: 2.5rem;
   outline: none;
   text-align: center;
   font-size: 20px;
@@ -103,23 +99,23 @@
 }
 
 .guests-selector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding-top: 5%;
 }
 
 .guest-picker {
-  padding-top: 5%;
-  margin: 0;
-  width: 12rem;
-  height: 1.1rem;
-  outline: none;
-  text-align: center;
   font-size: 20px;
-  border-color: black;
   cursor: pointer;
+  width: 91%;
+  padding-left: 8%;
+}
+
+.css-g1d714-ValueContainer {
+  height: 45px;
+
+}
+
+.css-yk16xz-control {
+  border-color: black;
 }
 
 .guest-picker::placeholder {
@@ -129,10 +125,10 @@
 
 .book-button {
     height: 3rem;
-    width: 13.5rem;
+    width: 12.5rem;
     font-size: 26px;
     border-radius: 10px;
-    margin-top: 8%;
+    margin-top: 7%;
     background-color: rgba(30, 130, 76, 1);
     color: white;
     text-align: center;
