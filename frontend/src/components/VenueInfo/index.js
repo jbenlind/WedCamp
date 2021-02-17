@@ -10,6 +10,7 @@ import { DatePicker } from 'react-nice-dates';
 import {enUS} from 'date-fns/locale';
 import 'react-nice-dates/build/style.css'
 import "./VenueInfo.css";
+import Select from 'react-select'
 
 const VenueInfo = () => {
   const history = useHistory();
@@ -47,7 +48,11 @@ const VenueInfo = () => {
     history.push('/', {bookedVenue: true})
   }
 
-
+  const options = [
+    {value:venue.maxNumberGuests - 100, label:venue.maxNumberGuests - 100 },
+    {value:venue.maxNumberGuests - 50, label:venue.maxNumberGuests - 50 },
+    {value:venue.maxNumberGuests, label:venue.maxNumberGuests},
+  ]
 
   return (
     <>
@@ -77,13 +82,7 @@ const VenueInfo = () => {
               </DatePicker>
             </div>
             <div className="guests-selector">
-              <input
-                type="select"
-                options={venue.maxNumberGuests - 100, venue.maxNumberGuests - 50, venue.maxNumberGuests}
-                className="guest-picker"
-                placeholder="Guests"
-                value={numGuests}
-                onChange={(event) => setNumGuests(event.target.value)}
+              <Select options={options}
               />
             </div>
             <button className='book-button' type="submit">Request Venue</button>
