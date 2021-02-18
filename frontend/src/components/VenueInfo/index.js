@@ -75,7 +75,7 @@ const VenueInfo = () => {
               </DatePicker>
             </div>
             <div className="guests-selector">
-              <select>
+              <select value={numGuests} onChange={(event) => setNumGuests(event.target.value)}>
                 <option value={venue.maxNumberGuests - 100}>{venue.maxNumberGuests - 100}</option>
                 <option value={venue.maxNumberGuests - 50}>{venue.maxNumberGuests - 50}</option>
                 <option value={venue.maxNumberGuests}>{venue.maxNumberGuests}</option>
