@@ -56,7 +56,7 @@
   border-radius: 15px;
   position: fixed;
   z-index: 1;
-  height: 30vh;
+  height: 32vh;
   width: 15vw;
   margin-top: 23%;
   margin-left: 40%;
@@ -358,18 +358,6 @@
   grid-column-end: 4;
   grid-row-start: 5;
   grid-row-end: 5;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
-}
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);        /* color of the tracking area */
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(30, 130, 76, 1);    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid lightgrey;  /* creates padding around scroll thumb */
 }
 
 .description-container::-webkit-scrollbar,
