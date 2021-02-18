@@ -40,7 +40,7 @@ const numberTranslator = (number) => {
                 <div className="card-holder-container">
                     <div className="card-holder-flex">
                        {venues &&
-                       <p className="search-header">{`We found ${numberTranslator(venues.length)} venues near you`}</p>}
+                       <p className="search-header">{`We found ${numberTranslator(venues.length)} venue(s) near you`}</p>}
                         {venues &&
                         venues.map((venue) => (
                             <Link className ='card-link-search' key={venue.id} to={`/explore/${venue.id}`}>
