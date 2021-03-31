@@ -31,7 +31,8 @@
     background-size: cover;
     padding-top: 5vh;
     margin-bottom: 3vh;
-    box-shadow: 3px 4px 4px rgb(46, 46, 46);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .6);
+    transition: .25s all ease-in-out;
 }
 
 .venue-card:hover {
