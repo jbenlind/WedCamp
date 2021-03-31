@@ -7,7 +7,7 @@ import App from './App';
 import configureStore from './store';
 import { restoreCSRF } from './store/csrf';
 import { ModalProvider } from './context/modal';
-import {LoadScript } from '@react-google-maps/api';
+import { LoadScript } from '@react-google-maps/api';
 
 
 const store = configureStore();
