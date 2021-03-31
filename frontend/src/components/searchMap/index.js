@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 import {Link} from 'react-router-dom';
-import { GoogleMap, Marker, InfoWindow} from '@react-google-maps/api';
+import { GoogleMap, Marker, InfoWindow, LoadScript} from '@react-google-maps/api';
 import './searchMap.css'
 
 const containerStyle = {

@@ -91,6 +91,7 @@
     box-shadow:2px 2px 10px  rgb(102, 101, 101);
     border: none;
     text-align: center;
+    cursor: pointer;
 }
 
 .date-text {
@@ -123,7 +124,8 @@
     border-radius: 50px;
     box-shadow:2px 2px 8px rgb(102, 101, 101);
     text-align: center;
-    color: rgba(0, 0, 0, .8)
+    color: rgba(0, 0, 0, .8);
+    cursor: pointer;
 }
 
 .nice-dates-popover {
