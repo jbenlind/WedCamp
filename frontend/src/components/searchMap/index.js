@@ -19,19 +19,19 @@ const SearchMap = () => {
   const [selected, setSelected] = useState(null)
 
     return (
+      <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
           zoom={7}
           onClick={() => setSelected(null)}
         >
-          { /* Child components, such as markers, info windows, etc. */ }
           {venues &&
           venues.map((venue) => (
             <Marker key={venue.id} onClick={() => setSelected(venue)} position={{lat: Number(venue.latitude), lng: Number(venue.longitude)}}/>
           ))}
-          {selected &&
-          <InfoWindow  position={{lat: Number(selected.latitude), lng: Number(selected.longitude)}}>
+          {selected !== null &&
+          <InfoWindow  onCloseClick={(e) => setSelected(null)} position={{lat: Number(selected.latitude), lng: Number(selected.longitude)}}>
            <div>
               <Link className="marker-link" to={`/explore/${selected.id}`}>{selected.name}</Link>
               <p className="marker-info">{`Avg Price: $${selected.averagePrice}`}</p>
@@ -40,7 +40,7 @@ const SearchMap = () => {
             </InfoWindow>}
           <></>
         </GoogleMap>
-
+      </LoadScript>
     )
 }
 
