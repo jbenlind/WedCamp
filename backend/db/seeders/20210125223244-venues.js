@@ -31,6 +31,7 @@ module.exports = {
         averagePrice: 1472,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/7687/The-Loft-and-Chapel-at-Cedar-Ridge-Waukesha-WI-6fe90302-1962-4db2-b4ec-54a5c80f31c4-97450e389c42885476f1fbe9bc5bca5a.jpeg",
         host: "Cedar Ridge",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -46,6 +47,7 @@ module.exports = {
         averagePrice: 5420,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/10490/The-Ridge-Hotel-Lake-Geneva-WI-f73cf488-b267-4c42-85fd-2cd4bb189933-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "The Ridge Hotel",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -61,6 +63,7 @@ module.exports = {
         averagePrice: 2412,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/10205/Windwood-of-Watertown-Watertown-WI-d5eb328a-3bd7-477f-9f52-6e3b36a81485-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Windwood",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -76,6 +79,7 @@ module.exports = {
         averagePrice: 2140,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/10316/Kilkarney-Hills-Golf-Course-River-Falls-WI-ed42570d-e006-4297-b899-f67eabdc1de9.1550165219-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Kilkarney Hills Golf Course",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -91,6 +95,7 @@ module.exports = {
         averagePrice: 5248,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/11756/Chula-Vista-Resort-Wisconsin-Dells-WI-7bcc643a-653a-4f94-ad5e-9ef95b8e1a6c-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Chula Vista Resort",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -106,6 +111,7 @@ module.exports = {
         averagePrice: 2928,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/14185/Racine-Zoo-Racine-WI-d76b65b5-ae54-436d-bde3-d4689b79134e-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Racine Zoo",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -121,6 +127,7 @@ module.exports = {
         averagePrice: 9677,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/8421/Justin-Trails-Resort-Sparta-WI-d594c3a5-a0da-438e-8c4f-0fc63bf799d0-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Justin Trails Resort",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -136,6 +143,7 @@ module.exports = {
         averagePrice: 3026,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/7737/The-Hollyhock-House---Garden-Kewaunee-WI-7fe35734-a7f5-40dd-a0f6-a62e32f4884b-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "The Hollyhock House & Garden",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -151,6 +159,7 @@ module.exports = {
         averagePrice: 2872,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/11237/Camp-Luwisomo-Wild-Rose-WI-0c819fe5-1282-461c-85b3-d3656e73d91f-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Camp Luwisomo",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -166,6 +175,7 @@ module.exports = {
         averagePrice: 6624,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/14314/Madison-Museum-of-Contemporary-Art-Madison-WI-3320f9ff-6b08-4090-b676-8d498eea0590-97450e389c42885476f1fbe9bc5bca5a.jpg",
         host: "Madison Museum of Contemporary Art",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -181,6 +191,7 @@ module.exports = {
         averagePrice: 3009,
         imgUrl: "https://cdn.wedding-spot.com/__sized__/images/venues/9991/Grand-Lodge-Waterpark-Resort-Rothschild-WI-ca002bc2-15fa-4949-a450-bde82806f036-97450e389c42885476f1fbe9bc5bca5a.JPG",
         host: "Grand Lodge Waterpark Resort",
+        reservedDates: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },

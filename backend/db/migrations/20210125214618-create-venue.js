@@ -52,7 +52,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       reservedDates: {
-        type:Sequelize.DATE
+        allowNull: true,
+        type:Sequelize.ARRAY(Sequelize.DATE)
       },
       createdAt: {
         allowNull: false,
