@@ -12,6 +12,7 @@ import 'react-nice-dates/build/style.css'
 import "./VenueInfo.css";
 
 const VenueInfo = () => {
+
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const [date, setDate] = useState(new Date());
@@ -33,6 +34,7 @@ const VenueInfo = () => {
   const venues = useSelector((state) => state.venueInfo.venues);
 
 
+
   useEffect(() => {
     if(loggedInUser) setUserId(loggedInUser)
   }, [loggedInUser, userId])
@@ -43,8 +45,33 @@ const VenueInfo = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault()
-    await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
-    history.push('/', {bookedVenue: true})
+    function formatDate() {
+      let month = '' + (date.getMonth() + 1)
+      let day = '' + date.getDate()
+      let year = date.getFullYear()
+
+      if (month.length < 2)
+          month = '0' + month;
+      if (day.length < 2)
+          day = '0' + day;
+
+      return [year, month, day].join('-');
+  }
+    const newFunc = () => {
+      for(let i = 0; i < venues[venueId - 1].reservedDates.length; i++) {
+        if (venues[venueId - 1].reservedDates[i].slice(0, 10) === formatDate()) {
+          return false
+        } else {
+          return true;
+        }
+      }
+    }
+    if(newFunc()) {
+      await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
+      history.push('/', {bookedVenue: true})
+    } else {
+      
+    }
   }
 
   return (
