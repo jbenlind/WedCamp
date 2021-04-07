@@ -22,19 +22,27 @@ router.get(
   })
 );
 
-router.get(
+router.post(
   "/search/:query",
   asyncHandler(async (req, res) => {
     const query = req.params.query;
+
+    const date = req.body.date.slice(0, 10);
 
     const results = await Venue.findAll({
       where : {
         city: {
           [Op.iLike] : `%${query}%`
-        }
+        },
       }
     })
-    res.json(results);
+    const filteredResults = results.filter((result) => {
+      if (result.reservedDates === null) {
+        return true
+      }
+      return !(result.reservedDates.join(" ").includes(date));
+    })
+    res.json(filteredResults)
   })
 )
 

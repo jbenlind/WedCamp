@@ -29,11 +29,11 @@ router.post(
       numberOfGuests: numGuests,
     });
     if(venue.reservedDates) {
-      venue.reservedDates.push(date);
+      venue.reservedDates = [...venue.reservedDates, date.toString().slice(0, 10)];
       venue.save();
     } else {
       venue.reservedDates = [];
-      venue.reservedDates.push(date);
+      venue.reservedDates = [...venue.reservedDates, date.toString().slice(0, 10)];
       venue.save();
     }
     res.json(booking);

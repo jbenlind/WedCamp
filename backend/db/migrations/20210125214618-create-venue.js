@@ -53,7 +53,7 @@ module.exports = {
       },
       reservedDates: {
         allowNull: true,
-        type:Sequelize.ARRAY(Sequelize.DATE)
+        type:Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,

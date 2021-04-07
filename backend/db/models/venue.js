@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     averagePrice: DataTypes.NUMERIC(10, 2),
     imgUrl: DataTypes.STRING,
     host: DataTypes.STRING,
-    reservedDates: DataTypes.ARRAY(DataTypes.DATE)
+    reservedDates: DataTypes.ARRAY(DataTypes.STRING)
   }, {});
   Venue.associate = function(models) {
     Venue.hasMany(models.Booking, { foreignKey: 'venueId'});
