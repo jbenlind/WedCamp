@@ -58,6 +58,9 @@ const VenueInfo = () => {
       return [year, month, day].join('-');
   }
     const newFunc = () => {
+      if(venues[venueId - 1].reservedDates === null) {
+        return true
+      } 
       for(let i = 0; i < venues[venueId - 1].reservedDates.length; i++) {
         if (venues[venueId - 1].reservedDates[i].slice(0, 10) === formatDate()) {
           return false
@@ -70,7 +73,7 @@ const VenueInfo = () => {
       await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
       history.push('/', {bookedVenue: true})
     } else {
-      
+
     }
   }
 

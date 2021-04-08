@@ -14,8 +14,14 @@ const search = (venues) => ({
     venues,
 });
 
-export const searchVenues = (query) => async (dispatch) => {
-    const response = await fetch(`/api/venues/search/${query}`)
+export const searchVenues = (query, date) => async (dispatch) => {
+    const response = await fetch(`/api/venues/search/${query}`, {
+        method: "Post",
+        headers : {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({date}),
+    })
     dispatch(search(response.data))
     return response;
 }

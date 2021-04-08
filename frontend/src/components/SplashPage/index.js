@@ -30,7 +30,7 @@ function SplashPage() {
   }
 
   const searchStarted = async () => {
-    await dispatch(venueActions.searchVenues(searchInput));
+    await dispatch(venueActions.searchVenues(searchInput, date));
     if (searchInput !== "") history.push("/searchResults");
   };
 
