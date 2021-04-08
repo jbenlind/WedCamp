@@ -60,7 +60,7 @@ const VenueInfo = () => {
     const newFunc = () => {
       if(venues[venueId - 1].reservedDates === null) {
         return true
-      } 
+      }
       for(let i = 0; i < venues[venueId - 1].reservedDates.length; i++) {
         if (venues[venueId - 1].reservedDates[i].slice(0, 10) === formatDate()) {
           return false
@@ -92,8 +92,8 @@ const VenueInfo = () => {
         </div>
         <div className='bookingForm'>
           <form className='booking-form' onSubmit={onSubmit}>
-            <h3 className="price">{`$${venue.averagePrice}`}</h3>
-            <h3 className='price-per'>(for 50 guests)</h3>
+            <h3 className="price">{`$${venue.averagePrice.slice(0,4)}`}</h3>
+            <h4 className='price-per'>/50 guests</h4>
             <div className="date-selector-venueInfo">
               <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                 {({ inputProps, focused }) => (
