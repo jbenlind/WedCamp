@@ -43,6 +43,7 @@ function UpComingBookings() {
                                 <Link className='booking-venue' to={`/explore/${booking.venueId}`}>{venues.find(venue => venue.id === booking.venueId) ? venues.find(venue => venue.id === booking.venueId).name : ""}</Link>
                                 <p className="booking-date">{date.toLocaleString("en-US", options )}</p>
                                 <p className="booking-guests">{`Guests: ${booking.numberOfGuests}`}</p>
+                                <button>Cancel Reservation</button>
                             </div>
                         </div>
                     )})}

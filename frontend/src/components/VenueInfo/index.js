@@ -60,18 +60,18 @@ const VenueInfo = () => {
           day = '0' + day;
 
       return [year, month, day].join('-');
-  }
+    }
     const newFunc = () => {
+      let newVar = true;
       if(venues[venueId - 1].reservedDates === null) {
         return true
       }
       for(let i = 0; i < venues[venueId - 1].reservedDates.length; i++) {
         if (venues[venueId - 1].reservedDates[i].slice(0, 10) === formatDate()) {
-          return false
-        } else {
-          return true;
+          newVar = false;
         }
       }
+      return newVar
     }
     if(newFunc()) {
       await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
