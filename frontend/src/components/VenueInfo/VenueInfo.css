@@ -72,9 +72,9 @@
 }
 
 .price {
+  margin: 20px 0;
   font-size: 28px;
   color: rgba(30, 130, 76, 1);
-
 }
 
 .price-per {
@@ -101,14 +101,20 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.guests-sel {
-  height: 45px;
-  width: 200px;
+  height: 40px;
+  width: 195px;
   border: 2px solid black;
   font-size: 20px;
   border-radius: 10px;
+  background-color: white;
+}
+
+.guests-sel {
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 180px;
+  background-color: white;
 }
 
 .guest-picker::placeholder {
