@@ -18,6 +18,7 @@ const VenueInfo = () => {
   const [date, setDate] = useState(new Date());
   const [numGuests, setNumGuests] = useState(0);
   const [userId, setUserId] = useState(null);
+  const [unavailable, setUnavailable] = useState(false)
 
   const modifiers = {
     disabled: date => date < Date.now()
@@ -44,6 +45,9 @@ const VenueInfo = () => {
   if (!venue) return null;
 
   const onSubmit = async (event) => {
+    if(!userId) {
+      history.push("/login")
+    }
     event.preventDefault()
     function formatDate() {
       let month = '' + (date.getMonth() + 1)
@@ -73,10 +77,10 @@ const VenueInfo = () => {
       await dispatch(bookingActions.createBooking({ userId, venueId, date, numGuests}))
       history.push('/', {bookedVenue: true})
     } else {
-
+      setUnavailable(true)
     }
   }
-
+console.log(venue.reservedDates)
   return (
     <>
     {showModal && <ReviewFormModal setShowModal={setShowModal} />}
@@ -93,7 +97,10 @@ const VenueInfo = () => {
         <div className='bookingForm'>
           <form className='booking-form' onSubmit={onSubmit}>
             <h3 className="price">{`$${venue.averagePrice.slice(0,4)}`}<h4 className='price-per'>/50 guests</h4></h3>
-
+            {!unavailable &&
+            <h3>Select A Date</h3>}
+            {unavailable &&
+            <h3>Date unavailable</h3>}
             <div className="date-selector-venueInfo">
               <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                 {({ inputProps, focused }) => (
