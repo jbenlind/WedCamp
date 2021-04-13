@@ -107,9 +107,9 @@ const VenueInfo = () => {
             <div className="guests-selector">
               <select className="guests-sel" value={numGuests} onChange={(event) => setNumGuests(event.target.value)}>
                 <option value="" default>Number of Guests</option>
-                <option className="option-background" value={venue.maxNumberGuests - 100}>{venue.maxNumberGuests - 100}</option>
-                <option value={venue.maxNumberGuests - 50}>{venue.maxNumberGuests - 50}</option>
-                <option value={venue.maxNumberGuests}>{venue.maxNumberGuests}</option>
+                <option className="option-background" value={venue.maxNumberGuests - 100}>{venue.maxNumberGuests - 100} Guests</option>
+                <option value={venue.maxNumberGuests - 50}>{venue.maxNumberGuests - 50} Guests</option>
+                <option value={venue.maxNumberGuests}>{venue.maxNumberGuests} Guests</option>
               </select>
             </div>
             <button className='book-button' type="submit">Request Venue</button>
