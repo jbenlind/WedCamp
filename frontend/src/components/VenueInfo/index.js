@@ -80,7 +80,6 @@ const VenueInfo = () => {
       setUnavailable(true)
     }
   }
-console.log(venue.reservedDates)
   return (
     <>
     {showModal && <ReviewFormModal setShowModal={setShowModal} />}

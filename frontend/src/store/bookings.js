@@ -1,10 +1,18 @@
 import { fetch } from "./csrf";
 
 const SET_BOOKINGS = 'bookings/SET_BOOKINGS';
+const DELETE_BOOKINGS = 'bookings/DELETE_BOOKINGS';
 
-export const setBookings = (bookings) => {
+const setBookings = (bookings) => {
     return {
         type: SET_BOOKINGS,
+        bookings: bookings
+    }
+}
+
+const deleteBookings = (bookings) => {
+    return {
+        type: DELETE_BOOKINGS,
         bookings: bookings
     }
 }
@@ -25,18 +33,17 @@ export const createBooking = ({userId, venueId, date, numGuests}) => {
     }
 }
 
-export const deleteBooking = (id, userId) => {
+export const deleteBooking = (bookingId, userId) => {
     return async (dispatch) => {
-        const res = await fetch(`/api/bookings/${userId}`, {
-            method: "delete",
+        const res = await fetch(`/api/bookings/${userId}/delete`, {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ id }),
+            body: JSON.stringify({ bookingId }),
         });
-        res.data = await res.json();
         if (res.ok) {
-          dispatch(setBookings(res.data.bookings));
+          dispatch(setBookings(res.data));
         }
         return res;
     }
@@ -50,6 +57,8 @@ export const findBookings = (userId) => async (dispatch) => {
 export default function bookingReducer(state = {}, action) {
     switch (action.type) {
         case SET_BOOKINGS:
+            return action.bookings;
+        case DELETE_BOOKINGS:
             return action.bookings;
         default:
             return state;
