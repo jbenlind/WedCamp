@@ -72,6 +72,9 @@ router.post(
       return date !== formattedDate
     })
     venue.reservedDates = updatedReservedDates;
+    if(venue.reservedDates.length === 0) {
+      venue.reservedDates = null;
+    }
     venue.save()
 
     await Booking.destroy({
