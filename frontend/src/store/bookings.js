@@ -10,13 +10,6 @@ const setBookings = (bookings) => {
     }
 }
 
-const deleteBookings = (bookings) => {
-    return {
-        type: DELETE_BOOKINGS,
-        bookings: bookings
-    }
-}
-
 export const createBooking = ({userId, venueId, date, numGuests}) => {
     return async dispatch => {
         const res = await fetch(`/api/bookings/${userId}`, {

@@ -15,8 +15,8 @@ const VenueInfo = () => {
 
   const history = useHistory();
   const [showModal, setShowModal] = useState(false);
-  const [date, setDate] = useState(new Date());
-  const [numGuests, setNumGuests] = useState(0);
+  const [date, setDate] = useState(null);
+  const [numGuests, setNumGuests] = useState(null);
   const [userId, setUserId] = useState(null);
   const [unavailable, setUnavailable] = useState(false)
 
@@ -63,6 +63,7 @@ const VenueInfo = () => {
     }
     const newFunc = () => {
       let newVar = true;
+      console.log(venue.reservedDates)
       if(venues[venueId - 1].reservedDates === null) {
         return true
       }
@@ -80,6 +81,8 @@ const VenueInfo = () => {
       setUnavailable(true)
     }
   }
+
+  console.log(date)
   return (
     <>
     {showModal && <ReviewFormModal setShowModal={setShowModal} />}
@@ -95,11 +98,11 @@ const VenueInfo = () => {
         </div>
         <div className='bookingForm'>
           <form className='booking-form' onSubmit={onSubmit}>
-            <h3 className="price">{`$${venue.averagePrice.slice(0,4)}`}<h4 className='price-per'>/50 guests</h4></h3>
+            <h3 className="price">{`$${venue.averagePrice.slice(0,4)}`}<p className='price-per'>/50 guests</p></h3>
             {!unavailable &&
-            <h3>Select A Date</h3>}
+            <h3 className="valid-date">Select A Date</h3>}
             {unavailable &&
-            <h3>Date unavailable</h3>}
+            <h3 className="invalid-date">Date unavailable</h3>}
             <div className="date-selector-venueInfo">
               <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
                 {({ inputProps, focused }) => (
@@ -118,7 +121,7 @@ const VenueInfo = () => {
                 <option value={venue.maxNumberGuests}>{venue.maxNumberGuests} Guests</option>
               </select>
             </div>
-            <button className='book-button' type="submit">Request Venue</button>
+            <button disabled={!date && !numGuests} className='book-button' type="submit">Request Venue</button>
           </form>
         </div>
         <div className="venue-items-container">

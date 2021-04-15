@@ -51,7 +51,6 @@ router.post(
     const { bookingId } = req.body;
 
     const bookingToRemove = await Booking.findByPk(bookingId);
-    console.log("-------------------------------------------------",bookingToRemove)
     const venueId = bookingToRemove.venueId;
     const venue = await Venue.findByPk(venueId);
 

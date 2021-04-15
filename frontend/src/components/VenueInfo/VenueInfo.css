@@ -60,8 +60,18 @@
   position: -webkit-sticky;
   top: 90px;
   border-radius: 15px;
-  background-color: #cbeece;
+  background-color: #fff;
   box-shadow:2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.valid-date {
+  font-size: 18px;
+  color: rgba(0, 0, 0, .8);
+}
+
+.invalid-date {
+  font-size: 18px;
+  color: red;
 }
 
 .booking-form {
