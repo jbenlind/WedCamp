@@ -8,5 +8,7 @@
         "sequelize-cli": "npm run --prefix backend sequelize-cli",
         "start": "npm start --prefix backend"
     },
-    "dependencies": {}
+    "dependencies": {
+        "sequelize": "^6.6.2"
+    }
 }
