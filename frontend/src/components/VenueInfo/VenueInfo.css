@@ -136,9 +136,8 @@
   justify-content: center;
 }
 
-.guest-picker::placeholder {
-  font-size: 19px;
-  color: rgba(0, 0, 0, .9);
+.date-input-info::placeholder {
+  color: rgba(0, 0, 0, .8);
 }
 
 .book-button {
