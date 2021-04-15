@@ -63,7 +63,7 @@ const VenueInfo = () => {
     }
     const newFunc = () => {
       let newVar = true;
-      console.log(venue.reservedDates)
+
       if(venues[venueId - 1].reservedDates === null) {
         return true
       }
@@ -81,8 +81,6 @@ const VenueInfo = () => {
       setUnavailable(true)
     }
   }
-
-  console.log(date)
   return (
     <>
     {showModal && <ReviewFormModal setShowModal={setShowModal} />}
