@@ -14,6 +14,13 @@
     padding-bottom: 6%;
 
 }
+@media (max-width: 1440px) {
+    .grid-body {
+    margin-left: 5vw;
+    width: 90vw;
+    }
+  }
+
 
 .venue-card {
     display: flex;
@@ -34,6 +41,12 @@
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .6);
     transition: .25s all ease-in-out;
 }
+@media (max-width: 1440px) {
+    .venue-card {
+        height: 70%;
+        width: 80%;
+    }
+  }
 
 .venue-card:hover {
     transform: translateY(-8px);
@@ -50,7 +63,11 @@
     width: 100%;
     background-color: rgb(93, 92, 72);
     overflow: hidden;
-
+}
+@media (max-width: 1440px) {
+    .card-title {
+        font-size: 23px;
+    }
 }
 
 .card-location {
@@ -62,7 +79,11 @@
     width: 100%;
     background-color: rgb(93, 92, 72);
     overflow: hidden;
-
+}
+@media (max-width: 1440px) {
+    .card-location {
+        font-size: 20px;
+    }
 }
 
 .card-link {

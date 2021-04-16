@@ -19,6 +19,12 @@
   border-radius: 25px;
   padding-bottom: 3.4%;
 }
+@media (max-width: 1440px) {
+  .details-grid {
+    margin-left: 15%;
+    width: 70%;
+  }
+}
 
 .venue-detail-title {
   display: flex;
