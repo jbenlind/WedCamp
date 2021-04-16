@@ -15,6 +15,11 @@
     padding-left: 0;
     padding-right: 0;
 }
+@media (max-width: 1440px) {
+    .nav-bar{
+        grid-template-columns: 20% 30% 30% 20%;
+    }
+  }
 
 .appName,
 .fad {

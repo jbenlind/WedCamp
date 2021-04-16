@@ -26,7 +26,7 @@ function SplashPage() {
   const [firstButton, setFirstButton] = useState(initialButton);
 
   const modifiers = {
-    disabled: date => date < Date.now()
+    disabled: date => date < Date.now(),
   }
 
   const searchStarted = async () => {
@@ -86,7 +86,7 @@ function SplashPage() {
               </div>
               <p className="date-text">Dates</p>
               <div className="search-date-box">
-                <DatePicker modifiers={modifiers} date={date} onDateChange={setDate} locale={enUS}>
+                <DatePicker modifiers={modifiers} minimumDate={Date.now()} date={date} onDateChange={setDate} locale={enUS}>
                   {({ inputProps, focused }) => (
                   <input
                     className={'date-input' + (focused ? ' -focused' : '')}
