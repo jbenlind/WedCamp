@@ -37,6 +37,11 @@
     font-weight: 700;
     color: white;
 }
+@media (max-width: 1440px) {
+    .header-1 {
+    font-size: 3.5rem;
+    }
+  }
 
 .header-2 {
     display: flex;
