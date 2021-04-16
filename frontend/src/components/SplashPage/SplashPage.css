@@ -39,7 +39,8 @@
 }
 @media (max-width: 1440px) {
     .header-1 {
-    font-size: 3.5rem;
+        margin-top: 20px;
+        font-size: 3.5rem;
     }
   }
 
@@ -164,8 +165,13 @@
     color: white;
     background-color: rgba(30, 130, 76, 1);
     box-shadow:2px 2px 8px rgb(102, 101, 101);
-
 }
+@media (max-width: 1440px) {
+    .search-bar-button {
+        font-size: 25px;
+        width: 80%;
+    }
+  }
 
 .search-bar-button:hover {
     cursor: pointer;
