@@ -20,6 +20,11 @@
     grid-template-columns: 15% 10% 50% 7% 18%;
     grid-template-rows: 5% 20% 5% 16% 54%;
 }
+@media (max-width: 1440px) {
+    .splash-grid {
+        padding-top: 7px;
+    }
+  }
 
 .splash-headers {
     grid-column-start: 3;
@@ -199,6 +204,11 @@
     color: white;
     text-align: center;
     z-index: 2;
+}
+@media (max-width: 1440px) {
+    .show-bookings-button {
+        font-size: 14px;
+  }
 }
 
 .side-bar-container {

@@ -4,10 +4,6 @@ import {Link} from 'react-router-dom';
 import { GoogleMap, Marker, InfoWindow, LoadScript} from '@react-google-maps/api';
 import './searchMap.css'
 
-const containerStyle = {
-  width: '1100px',
-  height: '832px'
-};
 
 const center = {
   lat: 44.558755,
@@ -21,7 +17,7 @@ const SearchMap = () => {
     return (
       <LoadScript googleMapsApiKey={process.env.REACT_APP_API_KEY}>
         <GoogleMap
-          mapContainerStyle={containerStyle}
+          id="search-map"
           center={center}
           zoom={7}
           onClick={() => setSelected(null)}

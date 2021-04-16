@@ -12,3 +12,12 @@
 .marker-info {
     font-size: 15px;
 }
+#search-map {
+    width: 65vw;
+    height: 89vh;
+}
+@media (max-width: 1440px) {
+    #search-map {
+        width: 55vw;
+    }
+  }
